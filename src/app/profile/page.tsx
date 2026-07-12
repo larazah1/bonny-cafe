@@ -7,6 +7,7 @@ import { useLocale } from "@/i18n/LocaleContext";
 import { pick } from "@/i18n/pick";
 import { formatSAR } from "@/lib/currency";
 import { getBranch } from "@/lib/branches";
+import { findProduct } from "@/lib/menu";
 import { useCustomerAuth } from "@/context/CustomerAuthContext";
 import { useOrders } from "@/context/OrdersContext";
 import { useCart } from "@/context/CartContext";
@@ -55,20 +56,9 @@ export default function ProfilePage() {
   const handleReorder = (order: Order) => {
     if (order.branchId !== branchId) setBranchId(order.branchId);
     order.lines.forEach((line) => {
-      addItem(
-        {
-          slug: line.slug,
-          name: line.name,
-          nameAr: line.name,
-          description: "",
-          category: "espresso-drinks",
-          image: line.image,
-          price: line.price,
-          available: true,
-        },
-        line.quantity,
-        line.note
-      );
+      const product = findProduct(order.branchId, line.slug);
+      if (!product) return;
+      addItem(product, line.quantity, line.note);
     });
     show(dict.orders.reordered, "success");
   };
