@@ -1,0 +1,297 @@
+# Café Website Development Prompt
+
+Build a production-ready, responsive café website using modern web development best practices.
+
+## Branding & Design
+
+* Use the provided logo located at `/images/logo`.
+* Extract the exact brown and white colors from the logo and use those HEX values consistently throughout the website.
+* The design should feel like a real premium café website—not an AI-generated template.
+* Do **not** use glassmorphism, transparency, opacity effects, blurred backgrounds, floating cards, or excessive gradients.
+* Keep the UI clean, elegant, modern, and minimal.
+* Focus on excellent typography, spacing, and usability.
+* Fully responsive across desktop, tablet, and mobile.
+* Optimize for accessibility (WCAG where possible), performance, and SEO.
+* Use smooth but subtle animations only where they improve UX.
+
+---
+
+# Website Structure
+
+Include the following pages:
+
+* Home
+* Menu
+* Branches
+* About Us
+* Contact
+* Login / Register
+
+---
+
+# Branches
+
+The café has **three branches**:
+
+1. Al Basateen
+2. Al Mohammadiyah
+3. Al Manar
+
+Each branch has:
+
+* Its own menu
+* Different available products
+* Different pricing if applicable
+* Different operating hours (if provided)
+
+---
+
+# Customer Experience
+
+Visitors can browse the website without logging in.
+
+Registration is required before placing an order.
+
+Registration includes:
+
+* Full Name
+* Mobile Number
+* Phone verification via OTP
+* Email Address
+
+Login should support:
+
+* Phone number + OTP
+  or
+* Email + Password (if implemented)
+
+---
+
+# Branch Selection
+
+When opening the website:
+
+* Request the user's location.
+* Automatically select the nearest branch.
+* The user can manually switch branches at any time.
+* Save the selected branch during the session.
+
+---
+
+# Ordering Flow
+
+The customer should be able to:
+
+1. Select a branch.
+2. Browse that branch's menu.
+3. View product images.
+4. View product details.
+5. Add items to cart.
+6. Choose:
+   * Drive-Thru Pickup
+   * Dine-In / In-Branch Pickup
+7. Review cart.
+8. Enter or confirm their name.
+9. Place the order.
+
+There is **no online payment**.
+
+The customer pays at the branch when collecting the order.
+
+---
+
+# Order Radius Restriction
+
+Ordering ahead is only available if the customer is within a **5-minute driving radius** of the selected branch.
+
+If the user is outside that radius:
+
+* Disable ordering.
+* Show a friendly message explaining that advance ordering is only available within a 5-minute radius.
+
+Use Google Maps (or another mapping service) to calculate actual travel time rather than straight-line distance.
+
+---
+
+# Menu
+
+Each menu item should include:
+
+* Product photo
+* Product name
+* Description
+* Price
+* Category
+* Availability status
+* Optional modifiers/add-ons (if applicable)
+
+Use the provided menu images for each item.
+
+Support categories such as:
+
+* Coffee
+* Espresso
+* Tea
+* Cold Drinks
+* Desserts
+* Pastries
+* Breakfast
+* Sandwiches
+* etc.
+
+---
+
+# Cart
+
+The cart should display:
+
+* Items
+* Quantity controls
+* Notes per item
+* Total price
+* Selected branch
+* Pickup type
+
+---
+
+# Customer Orders
+
+Customers should be able to:
+
+* View current order status.
+* View previous orders.
+* Reorder past purchases.
+* Cancel an order only before staff begin preparing it.
+
+Order statuses may include:
+
+* Received
+* Confirmed
+* Preparing
+* Ready for Pickup
+* Completed
+* Cancelled
+
+---
+
+# Branch Staff Dashboard
+
+Each branch has its own staff account.
+
+Staff can only view and manage orders for their assigned branch.
+
+Features include:
+
+* Secure login
+* Dashboard
+* New orders
+* Active orders
+* Ready orders
+* Completed orders
+* Cancelled orders
+* Search orders
+* Filter orders
+* Update order status
+* Estimated preparation time
+* Order history
+
+Either the customer or a staff member can confirm that the order has been collected/completed.
+
+---
+
+# Admin Dashboard
+
+Create a separate administrator dashboard.
+
+The admin can:
+
+* Manage branches
+* Manage staff accounts
+* Manage menu items
+* Upload product images
+* Change prices
+* Enable/disable products
+* View analytics
+* View sales reports
+* View order statistics
+* Manage operating hours
+* Configure ordering radius
+* Manage announcements
+* Manage homepage content
+
+---
+
+# Notifications
+
+Send notifications when:
+
+* OTP is sent
+* Order received
+* Order accepted
+* Order ready
+* Order completed
+
+Support SMS for OTP and optionally email notifications.
+
+---
+
+# Contact Page
+
+Include:
+
+* Branch locations
+* Interactive Google Maps
+* Opening hours
+* Phone numbers
+* Social media links
+* Contact form
+
+---
+
+# Technical Requirements
+
+* Responsive-first implementation.
+* Fast loading and optimized assets.
+* Lazy-load images where appropriate.
+* Proper form validation.
+* Secure authentication.
+* Mobile-friendly navigation.
+* Semantic HTML.
+* Clean, maintainable, reusable code.
+* Modular architecture.
+* Error handling for network/API failures.
+* Loading states and empty states.
+* Image optimization.
+* SEO metadata for every page.
+
+---
+
+# User Experience
+
+* Intuitive navigation.
+* Minimal clicks to place an order.
+* Clear call-to-action buttons.
+* Consistent spacing and typography.
+* Professional micro-interactions.
+* No clutter.
+* Modern but timeless visual design.
+
+---
+
+# Future Scalability
+
+Structure the project so it can later support:
+
+* Online payment gateways
+* Employee notification for new orders
+* Loyalty points
+* Rewards program
+* Discount coupons
+* Push notifications
+* Table reservations
+* Additional branches
+* Inventory management
+* QR code ordering
+* Customer reviews
+
+Design the codebase with scalability, maintainability, and future feature expansion in mind.
