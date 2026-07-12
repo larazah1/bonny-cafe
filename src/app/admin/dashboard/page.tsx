@@ -23,7 +23,7 @@ type Tab = "overview" | "orders" | "menu" | "branches" | "staff" | "rooftop" | "
 
 export default function AdminDashboardPage() {
   const { locale, dict } = useLocale();
-  const { admin, logout } = useAdminAuth();
+  const { admin } = useAdminAuth();
   const router = useRouter();
   const [tab, setTab] = useState<Tab>("overview");
 
@@ -56,12 +56,6 @@ export default function AdminDashboardPage() {
           >
             {dict.admin.profileLink}
           </Link>
-          <button
-            onClick={logout}
-            className="focus-ring rounded-full border border-brown-200 px-4 py-2 text-xs font-semibold text-brown-700 hover:border-brown-400"
-          >
-            {dict.nav.logout}
-          </button>
         </div>
       </div>
 

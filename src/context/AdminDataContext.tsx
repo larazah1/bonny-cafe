@@ -102,7 +102,7 @@ export function AdminDataProvider({ children }: { children: ReactNode }) {
   const [branchOverrides, setBranchOverrides] = useState<BranchOverrides>({});
   const [customProducts, setCustomProducts] = useState<CustomProduct[]>([]);
   const [orderRadiusMinutes, setOrderRadiusMinutesState] = useState(ORDER_RADIUS_MINUTES);
-  const [requireLocationCheck, setRequireLocationCheckState] = useState(true);
+  const [requireLocationCheck, setRequireLocationCheckState] = useState(false);
   const [announcement, setAnnouncementState] = useState<Announcement>({ en: "", ar: "" });
 
   const loadAll = () => {
@@ -110,7 +110,7 @@ export function AdminDataProvider({ children }: { children: ReactNode }) {
     setBranchOverrides(readStorage(KEY_BRANCHES, {} as BranchOverrides));
     setCustomProducts(readStorage(KEY_CUSTOM_PRODUCTS, [] as CustomProduct[]));
     setOrderRadiusMinutesState(readStorage(KEY_RADIUS, ORDER_RADIUS_MINUTES));
-    setRequireLocationCheckState(readStorage(KEY_REQUIRE_LOCATION, true));
+    setRequireLocationCheckState(readStorage(KEY_REQUIRE_LOCATION, false));
     setAnnouncementState(readStorage(KEY_ANNOUNCEMENT, { en: "", ar: "" } as Announcement));
   };
 

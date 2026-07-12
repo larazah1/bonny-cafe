@@ -27,7 +27,7 @@ const LOCALE_KEY = "bonny.locale";
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
+  const [locale, setLocaleState] = useState<Locale>("ar");
 
   useEffect(() => {
     const stored = readStorage<Locale | null>(LOCALE_KEY, null);

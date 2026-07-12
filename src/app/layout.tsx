@@ -53,7 +53,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ar"
+      dir="rtl"
       className={`${fraunces.variable} ${inter.variable} ${reemKufi.variable} ${tajawal.variable}`}
     >
       <body className="flex min-h-screen flex-col bg-cream-50 font-sans text-brown-950 antialiased">

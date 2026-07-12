@@ -29,7 +29,7 @@ const NEXT_STATUS: Partial<Record<OrderStatus, OrderStatus>> = {
 
 export default function StaffDashboardPage() {
   const { locale, dict } = useLocale();
-  const { staff, logout } = useStaffAuth();
+  const { staff } = useStaffAuth();
   const { ordersForBranch, updateStatus } = useOrders();
   const router = useRouter();
 
@@ -92,12 +92,6 @@ export default function StaffDashboardPage() {
           >
             {dict.staff.profileLink}
           </Link>
-          <button
-            onClick={logout}
-            className="focus-ring rounded-full border border-brown-200 px-4 py-2 text-xs font-semibold text-brown-700 hover:border-brown-400"
-          >
-            {dict.nav.logout}
-          </button>
         </div>
       </div>
 
