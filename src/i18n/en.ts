@@ -294,7 +294,7 @@ const en = {
     applyTo: "Apply changes to",
     image: "Image path",
     description: "Description",
-    imageHint: "Path under /public, e.g. /images/products/latte.jpg",
+    imageHint: "Path under /public, e.g. /images/menu/latte.jpg",
     dropImageHint: "Drag & drop an image, or click to browse",
     replaceImage: "Replace image",
     imageTooLarge: "That file doesn't look like an image.",

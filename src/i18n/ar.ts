@@ -294,7 +294,7 @@ const ar: Dictionary = {
     applyTo: "تطبيق التغييرات على",
     image: "مسار الصورة",
     description: "الوصف",
-    imageHint: "مسار داخل /public، مثال: /images/products/latte.jpg",
+    imageHint: "مسار داخل /public، مثال: /images/menu/latte.jpg",
     dropImageHint: "اسحب وأفلت صورة، أو اضغط للتصفح",
     replaceImage: "استبدال الصورة",
     imageTooLarge: "هذا الملف لا يبدو أنه صورة.",

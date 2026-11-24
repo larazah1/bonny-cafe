@@ -14,7 +14,7 @@ const ALLERGEN_NOTE = ["Egg", "Wheat & derivatives", "Nuts", "Milk & derivatives
 export const DEFAULT_PREP_TIME_MINUTES = 12;
 
 function img(slug: string) {
-  return `/images/products/${slug}.jpg`;
+  return `/images/menu/${slug}.jpg`;
 }
 
 /**

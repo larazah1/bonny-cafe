@@ -161,7 +161,7 @@ export function AdminDataProvider({ children }: { children: ReactNode }) {
       nameAr: input.nameAr || input.name,
       description: input.description,
       category: input.category,
-      image: input.image || "/images/products/latte.jpg",
+      image: input.image || "/images/menu/latte.jpg",
       branchInfo,
     };
     setCustomProducts((prev) => {
