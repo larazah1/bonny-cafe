@@ -1,0 +1,464 @@
+{
+  "mechato": {
+    "file": "Espresso macchiato Chiang Mai.JPG",
+    "author": "Takeaway",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Espresso_macchiato_Chiang_Mai.JPG"
+  },
+  "espresso": {
+    "file": "Crema espresso Akha Ama.jpg",
+    "author": "Takeaway",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Crema_espresso_Akha_Ama.jpg"
+  },
+  "restretto": {
+    "file": "Espresso BW 1.jpg",
+    "author": "Berthold Werner",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Espresso_BW_1.jpg"
+  },
+  "latte": {
+    "file": "Latte art heart Garden Caffé Portugal 20190118.jpg",
+    "author": "Londonjackbooks",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Latte_art_heart_Garden_Caff%C3%A9_Portugal_20190118.jpg"
+  },
+  "cappuccino": {
+    "file": "Cappuccino with foam.jpg",
+    "author": "Johnny Lopez",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cappuccino_with_foam.jpg"
+  },
+  "flat-white": {
+    "file": "Flat white coffee with pretty feather pattern.jpg",
+    "author": "GeorgeMichaelFarewell",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flat_white_coffee_with_pretty_feather_pattern.jpg"
+  },
+  "cortado": {
+    "file": "Cortado - LOAM 2023-08-22.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Cortado_-_LOAM_2023-08-22.jpg"
+  },
+  "salted-caramel-latte": {
+    "file": "Latte macchiato with coffee beans.jpg",
+    "author": "א (Aleph)",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Latte_macchiato_with_coffee_beans.jpg"
+  },
+  "white-mocha": {
+    "file": "Mocha - Si Signore 2024-01-15.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Mocha_-_Si_Signore_2024-01-15.jpg"
+  },
+  "spanish-latte": {
+    "file": "Glass of Coffee Latte with Pastry (2).jpg",
+    "author": "Jonatan Svensson Glad",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Glass_of_Coffee_Latte_with_Pastry_(2).jpg"
+  },
+  "cold-brew": {
+    "file": "Maple Cream Cold Brew - Trading Post Coffee Roasters 2026-07-16.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Maple_Cream_Cold_Brew_-_Trading_Post_Coffee_Roasters_2026-07-16.jpg"
+  },
+  "matcha-latte": {
+    "file": "Matcha tea latte with rosetta latte art.jpg",
+    "author": "Irvan Ary Maulana",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Matcha_tea_latte_with_rosetta_latte_art.jpg"
+  },
+  "pina-colada": {
+    "file": "Pina Colada at Aruba.jpg",
+    "author": "DDJJ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pina_Colada_at_Aruba.jpg"
+  },
+  "trio-cake": {
+    "file": "Pistachio & Chocolate Mousse Cake - Caffè Nero 2025-01-14.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Pistachio_%26_Chocolate_Mousse_Cake_-_Caff%C3%A8_Nero_2025-01-14.jpg"
+  },
+  "dolchie-cake": {
+    "file": "Torta de Chocolate y Dulce de Leche San Martin de los Andes.JPG",
+    "author": "Albasmalko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Torta_de_Chocolate_y_Dulce_de_Leche_San_Martin_de_los_Andes.JPG"
+  },
+  "yogurt-granola": {
+    "file": "Granola and Yogurt.jpg",
+    "author": "Bambiwa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Granola_and_Yogurt.jpg"
+  },
+  "date-cheese": {
+    "file": "Cheesecake with slice cut out.jpg",
+    "author": "Martin van Dam",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cheesecake_with_slice_cut_out.jpg"
+  },
+  "tiramisu": {
+    "file": "Dolce Tiramisù monoporzione.jpg",
+    "author": "Anna.Massini",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dolce_Tiramis%C3%B9_monoporzione.jpg"
+  },
+  "salted-carrot-cake": {
+    "file": "Carrot cake slice and latte - Saltmarsh Farmhouse & Cafe 2024-12-19.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Carrot_cake_slice_and_latte_-_Saltmarsh_Farmhouse_%26_Cafe_2024-12-19.jpg"
+  },
+  "mango-pudding": {
+    "file": "Mango pudding.JPG",
+    "author": "Terence",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Mango_pudding.JPG"
+  },
+  "french-toast": {
+    "file": "French toast 001.jpg",
+    "author": "Ocdp",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:French_toast_001.jpg"
+  },
+  "lotus-caramel": {
+    "file": "Lotus Cheesecake - Hundred.jpg",
+    "author": "Francesc Fort",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_Cheesecake_-_Hundred.jpg"
+  },
+  "colombia": {
+    "file": "Roasted coffee beans.jpg",
+    "author": "MarkSweep",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans.jpg"
+  },
+  "piclo": {
+    "file": "Piccolo at filter coffee at Wood St Coffee, Walthamstow.jpg",
+    "author": "Bex Walton",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Piccolo_at_filter_coffee_at_Wood_St_Coffee,_Walthamstow.jpg"
+  },
+  "ice-latte": {
+    "file": "Starbucks Grande Iced Pumpkin Spice Latte.jpg",
+    "author": "JimmyStardust",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Starbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg"
+  },
+  "americano": {
+    "file": "Long Black Coffee.jpg",
+    "author": "책읽는달팽",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Long_Black_Coffee.jpg"
+  },
+  "turkish-coffee": {
+    "file": "Turkish coffee in Jajce.jpg",
+    "author": "Adam Harangozó",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Turkish_coffee_in_Jajce.jpg"
+  },
+  "hot-coffee-of-the-day": {
+    "file": "A small cup of coffee.JPG",
+    "author": "Julius Schorzman",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_small_cup_of_coffee.JPG"
+  },
+  "iced-coffee-of-the-day": {
+    "file": "Iced Coffee in Glass - Sunshine Coffee - Laramie Cafe (53838344552).jpg",
+    "author": "Tony Webster",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iced_Coffee_in_Glass_-_Sunshine_Coffee_-_Laramie_Cafe_(53838344552).jpg"
+  },
+  "chemex": {
+    "file": "Chemex Coffeemaker.jpg",
+    "author": "Fletcher6",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chemex_Coffeemaker.jpg"
+  },
+  "v60": {
+    "file": "Hario V60 metal coffee dripper Boleslawiec pottery (2026-11-14).jpg",
+    "author": "Olgierd Rudak",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hario_V60_metal_coffee_dripper_Boleslawiec_pottery_(2026-11-14).jpg"
+  },
+  "ice": {
+    "file": "Ice cubes in a glass.jpg",
+    "author": "Nattu from Male', Maldives",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ice_cubes_in_a_glass.jpg"
+  },
+  "oska-water": {
+    "file": "A bottle of cold water with droplets.jpg",
+    "author": "Philsacor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:A_bottle_of_cold_water_with_droplets.jpg"
+  },
+  "sparkling-water": {
+    "file": "Sparkling Water (4675945072).jpg",
+    "author": "Vancouver Bites! from Vancouver, Canada",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sparkling_Water_(4675945072).jpg"
+  },
+  "hibiscus": {
+    "file": "Homemade sorrel drink.jpg",
+    "author": "stu_spivack",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Homemade_sorrel_drink.jpg"
+  },
+  "iced-tea-peach": {
+    "file": "Peach iced tea with orange slices.jpg",
+    "author": "Baoothersks",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Peach_iced_tea_with_orange_slices.jpg"
+  },
+  "passion-fruit-smoothie": {
+    "file": "Cocktail of passion fruit juice and watermelon juice in a glass.jpg",
+    "author": "B722N",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cocktail_of_passion_fruit_juice_and_watermelon_juice_in_a_glass.jpg"
+  },
+  "orange-juice": {
+    "file": "Orange juice 1 edit1.jpg",
+    "author": "Agency of the United States Department of Agriculture Edited Version by: Arad",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg"
+  },
+  "summer-potion-smoothie": {
+    "file": "Fresh fruit smoothie being poured into a glass.jpg",
+    "author": "Shixart1985",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fresh_fruit_smoothie_being_poured_into_a_glass.jpg"
+  },
+  "iced-tea-pineapple": {
+    "file": "Pineapple juice in glass.jpg",
+    "author": "B722N",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pineapple_juice_in_glass.jpg"
+  },
+  "hot-chocolate": {
+    "file": "Dark Hot Chocolate, San Churro Leederville, 2026 (02).jpg",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dark_Hot_Chocolate,_San_Churro_Leederville,_2026_(02).jpg"
+  },
+  "sahlab": {
+    "file": "Sahlab with crushed pistachio and cinnamon.jpg",
+    "author": "Maor X",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sahlab_with_crushed_pistachio_and_cinnamon.jpg"
+  },
+  "iced-chocolate": {
+    "file": "GLASS OF HAPPINESS.jpg",
+    "author": "Elakkiya Loganayaki",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:GLASS_OF_HAPPINESS.jpg"
+  },
+  "lemon-mint-smoothie": {
+    "file": "Lemon Mint Cooler 2.JPG",
+    "author": "Riddhichoksi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lemon_Mint_Cooler_2.JPG"
+  },
+  "rice-krispy": {
+    "file": "KOCIS rice puff yeotgangjeong (4646381787).jpg",
+    "author": "Korea.net / Korean Culture and Information Service",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KOCIS_rice_puff_yeotgangjeong_(4646381787).jpg"
+  },
+  "house-layers": {
+    "file": "COCO'S Choco Minto Glass Parfait.jpg",
+    "author": "スサゾー",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:COCO%27S_Choco_Minto_Glass_Parfait.jpg"
+  },
+  "crunchy-chocolate": {
+    "file": "Brownie IMG 001.jpg",
+    "author": "Phadke09",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brownie_IMG_001.jpg"
+  },
+  "tuna-sandwich": {
+    "file": "Tuna olive and avocado sandwich.jpg",
+    "author": "Richard Masoner",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuna_olive_and_avocado_sandwich.jpg"
+  },
+  "egg-sandwich": {
+    "file": "Japanese egg sandwich in a sandwich case.jpg",
+    "author": "Quercus acuta",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Japanese_egg_sandwich_in_a_sandwich_case.jpg"
+  },
+  "cheese-sandwich": {
+    "file": "Grilled cheese sandwich with roasted tomato soup.jpg",
+    "author": "jeffreyw",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grilled_cheese_sandwich_with_roasted_tomato_soup.jpg"
+  },
+  "chicken-fajitas": {
+    "file": "Fajitas Wraps.JPG",
+    "author": "Miansari66",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Fajitas_Wraps.JPG"
+  },
+  "halloumi-vegetables": {
+    "file": "Spicy & Smoky Halloumi Sandwich - T @ The Dials 2025-04-12.jpg",
+    "author": "Andy Li",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Spicy_%26_Smoky_Halloumi_Sandwich_-_T_@_The_Dials_2025-04-12.jpg"
+  },
+  "halloumi-pesto": {
+    "file": "Panini sandwich near Mirpur 10 (2).jpg",
+    "author": "MdsShakil",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Panini_sandwich_near_Mirpur_10_(2).jpg"
+  },
+  "turkey-toast": {
+    "file": "Turkey club sandwich and potato chips - Cambridge, MA.jpg",
+    "author": "Daderot",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Turkey_club_sandwich_and_potato_chips_-_Cambridge,_MA.jpg"
+  },
+  "chips": {
+    "file": "Chips in a bowl at a party.JPG",
+    "author": "Tomwsulcer",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Chips_in_a_bowl_at_a_party.JPG"
+  },
+  "chicken-cajun": {
+    "file": "Chicken sandwich.jpg",
+    "author": "Tmannya",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_sandwich.jpg"
+  },
+  "colombia-reserve": {
+    "file": "Coffee Beans, color (28183654506).jpg",
+    "author": "Chuck Grimmett from Yonkers, NY, United States of America",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Coffee_Beans,_color_(28183654506).jpg"
+  },
+  "uganda": {
+    "file": "Dark Roast Coffee (2016).JPG",
+    "author": "Alvintrusty",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dark_Roast_Coffee_(2016).JPG"
+  },
+  "ethiopia": {
+    "file": "Coffee Beans macro 5.jpg",
+    "author": "Daniel Schwen",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coffee_Beans_macro_5.jpg"
+  },
+  "colombia-peach": {
+    "file": "Macro close up look of roasted coffee beans.jpg",
+    "author": "Jameswasswa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Macro_close_up_look_of_roasted_coffee_beans.jpg"
+  },
+  "colombia-grape": {
+    "file": "Green Bean Coffee.jpg",
+    "author": "DeaPeaJay",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Green_Bean_Coffee.jpg"
+  },
+  "special-v60": {
+    "file": "Manual drip (pour-over) coffee.jpg",
+    "author": "Kim Sanso",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Manual_drip_(pour-over)_coffee.jpg"
+  },
+  "coffee-day-box": {
+    "file": "Person serving coffee into two cups at a wooden table indoors.jpg",
+    "author": "Shixart1985",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Person_serving_coffee_into_two_cups_at_a_wooden_table_indoors.jpg"
+  },
+  "mojito-mix-berry": {
+    "file": "Strawberry Mojito (Unsplash).jpg",
+    "author": "Neha Deshmukh nehadeshmukh",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Strawberry_Mojito_(Unsplash).jpg"
+  },
+  "yemeni": {
+    "file": "Green Coffee Beans (4075921494).jpg",
+    "author": "Michael Allen Smith@INeedCoffee from Seattle, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Green_Coffee_Beans_(4075921494).jpg"
+  },
+  "colombia-passion-fruit": {
+    "file": "Roasted coffee beans on the surface. 01.jpg",
+    "author": "A S M Jobaer",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans_on_the_surface._01.jpg"
+  }
+}
