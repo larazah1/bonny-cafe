@@ -30,18 +30,18 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bonnycafe.example.com"),
+  metadataBase: new URL("https://mochahouse.example.com"),
   title: {
-    default: "Bonny Café | Specialty Coffee in Jeddah",
-    template: "%s | Bonny Café",
+    default: "Mocha House | Specialty Coffee in Jeddah",
+    template: "%s | Mocha House",
   },
   description:
-    "Bonny Café — specialty coffee, desserts and sandwiches across three Jeddah branches. Order ahead for pickup or dine in.",
+    "Mocha House — specialty coffee, desserts and sandwiches across three Jeddah branches. Order ahead for pickup or dine in.",
   openGraph: {
-    title: "Bonny Café",
+    title: "Mocha House",
     description:
       "Specialty coffee, desserts and sandwiches across three Jeddah branches.",
-    siteName: "Bonny Café",
+    siteName: "Mocha House",
     type: "website",
   },
 };
@@ -57,7 +57,7 @@ export default function RootLayout({
       dir="rtl"
       className={`${fraunces.variable} ${inter.variable} ${reemKufi.variable} ${tajawal.variable}`}
     >
-      <body className="flex min-h-screen flex-col bg-cream-50 font-sans text-brown-950 antialiased">
+      <body className="flex min-h-screen flex-col bg-cream-50 font-sans text-heading antialiased">
         <AppProviders>
           <SiteHeader />
           <main className="flex-1">{children}</main>

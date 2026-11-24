@@ -25,7 +25,7 @@ export function BranchSwitcher({ compact = false }: { compact?: boolean }) {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="focus-ring flex items-center gap-1.5 rounded-full border border-brown-200 px-3 py-1.5 text-xs font-medium text-brown-800 transition-colors hover:border-brown-400"
+        className="focus-ring flex items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-xs font-medium text-brown-800 transition-colors hover:border-brown-400"
         aria-haspopup="listbox"
         aria-expanded={open}
       >
@@ -47,7 +47,7 @@ export function BranchSwitcher({ compact = false }: { compact?: boolean }) {
       {open && (
         <div
           role="listbox"
-          className="absolute end-0 z-40 mt-2 w-72 rounded-2xl border border-brown-100 bg-white p-2 shadow-xl"
+          className="absolute end-0 z-40 mt-2 w-72 rounded-2xl border border-line-soft bg-white p-2 shadow-xl"
         >
           {BRANCHES.map((b) => {
             const dist = coords ? haversineDistanceKm(coords.lat, coords.lng, b.lat, b.lng) : null;
@@ -62,8 +62,8 @@ export function BranchSwitcher({ compact = false }: { compact?: boolean }) {
                 }}
                 className={`flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-start text-sm transition-colors ${
                   b.id === branchId
-                    ? "bg-brown-800 text-cream-50"
-                    : "text-brown-900 hover:bg-brown-50"
+                    ? "bg-primary text-on-primary"
+                    : "text-brown-900 hover:bg-tint"
                 }`}
               >
                 <span>
@@ -71,7 +71,7 @@ export function BranchSwitcher({ compact = false }: { compact?: boolean }) {
                   {b.id === nearestBranchId && (
                     <span
                       className={`text-xs ${
-                        b.id === branchId ? "text-cream-100" : "text-brown-500"
+                        b.id === branchId ? "text-cream-100" : "text-muted"
                       }`}
                     >
                       {pick(locale, "Nearest to you", "الأقرب إليك")}
@@ -79,7 +79,7 @@ export function BranchSwitcher({ compact = false }: { compact?: boolean }) {
                   )}
                 </span>
                 {dist !== null && (
-                  <span className={b.id === branchId ? "text-cream-100" : "text-brown-400"}>
+                  <span className={b.id === branchId ? "text-cream-100" : "text-subtle"}>
                     {dist.toFixed(1)} km
                   </span>
                 )}

@@ -24,8 +24,8 @@ interface StaffAuthContextValue {
   changePassword: (username: string, newPassword: string) => void;
 }
 
-const STAFF_KEY = "bonny.staffAccounts";
-const SESSION_KEY = "bonny.staffSession";
+const STAFF_KEY = "cafe.staffAccounts";
+const SESSION_KEY = "cafe.staffSession";
 
 const SEED: StoredStaff[] = [
   { username: "basateen.staff", password: "staff123", branchId: "al-basateen", name: "Al Basateen Team" },

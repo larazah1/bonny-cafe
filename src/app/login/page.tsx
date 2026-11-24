@@ -75,15 +75,15 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="mx-auto max-w-md px-4 py-14 sm:px-6">
-      <h1 className="font-display text-3xl font-semibold text-brown-950">{dict.auth.loginTitle}</h1>
-      <p className="mt-2 text-brown-500">{dict.auth.loginSubtitle}</p>
+    <div className="container-page max-w-md py-section">
+      <h1 className="font-display text-3xl font-semibold text-heading">{dict.auth.loginTitle}</h1>
+      <p className="mt-2 text-muted">{dict.auth.loginSubtitle}</p>
 
-      <div className="mt-8 flex gap-2 rounded-full bg-brown-100 p-1">
+      <div className="mt-8 flex gap-2 rounded-full bg-tint-strong p-1">
         <button
           onClick={() => setTab("phone")}
           className={`flex-1 rounded-full py-2 text-sm font-semibold transition-colors ${
-            tab === "phone" ? "bg-white text-brown-900 shadow-sm" : "text-brown-500"
+            tab === "phone" ? "bg-white text-brown-900 shadow-sm" : "text-muted"
           }`}
         >
           {dict.auth.tabPhone}
@@ -91,7 +91,7 @@ export default function LoginPage() {
         <button
           onClick={() => setTab("email")}
           className={`flex-1 rounded-full py-2 text-sm font-semibold transition-colors ${
-            tab === "email" ? "bg-white text-brown-900 shadow-sm" : "text-brown-500"
+            tab === "email" ? "bg-white text-brown-900 shadow-sm" : "text-muted"
           }`}
         >
           {dict.auth.tabEmail}
@@ -111,11 +111,11 @@ export default function LoginPage() {
           </form>
         ) : (
           <form onSubmit={handleVerify} className="mt-6 space-y-4">
-            <p className="text-sm text-brown-500">
+            <p className="text-sm text-muted">
               {dict.auth.codeSentTo} <span dir="ltr">{mobile}</span>
             </p>
             {demoCode && (
-              <p className="rounded-xl bg-brown-50 p-3 text-sm text-brown-700">
+              <p className="rounded-xl bg-tint p-3 text-sm text-body">
                 {dict.auth.demoCodeNote} <span className="font-mono font-bold">{demoCode}</span>
               </p>
             )}
@@ -165,7 +165,7 @@ export default function LoginPage() {
         </form>
       )}
 
-      <p className="mt-6 text-center text-sm text-brown-500">
+      <p className="mt-6 text-center text-sm text-muted">
         {dict.auth.noAccount}{" "}
         <Link href="/register" className="font-semibold text-brown-800 hover:underline">
           {dict.auth.createAccount}
@@ -176,13 +176,13 @@ export default function LoginPage() {
 }
 
 const inputClass =
-  "focus-ring mt-1.5 w-full rounded-xl border border-brown-200 bg-white px-3.5 py-2.5 text-sm text-brown-900";
+  "focus-ring mt-1.5 w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-sm text-brown-900";
 const submitClass =
-  "focus-ring w-full rounded-full bg-brown-800 py-3 text-sm font-semibold text-cream-50 hover:bg-brown-900";
+  "focus-ring w-full rounded-full bg-primary py-3 text-sm font-semibold text-on-primary hover:bg-primary-strong";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <label className="block text-sm font-medium text-brown-700">
+    <label className="block text-sm font-medium text-body">
       {label}
       {children}
     </label>

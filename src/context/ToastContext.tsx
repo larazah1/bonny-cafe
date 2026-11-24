@@ -40,10 +40,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             role="status"
             className={`animate-fade-up pointer-events-auto rounded-full px-5 py-2.5 text-sm font-medium shadow-lg ${
               t.tone === "success"
-                ? "bg-brown-800 text-cream-50"
+                ? "bg-primary text-on-primary"
                 : t.tone === "error"
                 ? "bg-red-700 text-white"
-                : "bg-brown-900 text-cream-50"
+                : "bg-primary-strong text-on-primary"
             }`}
           >
             {t.message}

@@ -22,7 +22,7 @@ interface LocaleContextValue {
   toggleLocale: () => void;
 }
 
-const LOCALE_KEY = "bonny.locale";
+const LOCALE_KEY = "cafe.locale";
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 

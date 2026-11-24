@@ -4,7 +4,7 @@ import { OrderStatus } from "@/lib/types";
 const COLORS: Record<OrderStatus, string> = {
   preparing: "bg-amber-100 text-amber-800",
   ready: "bg-green-100 text-green-700",
-  completed: "bg-brown-800 text-cream-50",
+  completed: "bg-primary text-on-primary",
   cancelled: "bg-red-100 text-red-700",
 };
 

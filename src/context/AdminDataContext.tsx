@@ -78,12 +78,12 @@ interface AdminDataContextValue {
   setAnnouncement: (a: Announcement) => void;
 }
 
-const KEY_PRODUCTS = "bonny.productOverrides";
-const KEY_BRANCHES = "bonny.branchOverrides";
-const KEY_RADIUS = "bonny.orderRadiusMinutes";
-const KEY_REQUIRE_LOCATION = "bonny.requireLocationCheck";
-const KEY_ANNOUNCEMENT = "bonny.announcement";
-const KEY_CUSTOM_PRODUCTS = "bonny.customProducts";
+const KEY_PRODUCTS = "cafe.productOverrides";
+const KEY_BRANCHES = "cafe.branchOverrides";
+const KEY_RADIUS = "cafe.orderRadiusMinutes";
+const KEY_REQUIRE_LOCATION = "cafe.requireLocationCheck";
+const KEY_ANNOUNCEMENT = "cafe.announcement";
+const KEY_CUSTOM_PRODUCTS = "cafe.customProducts";
 
 const AdminDataContext = createContext<AdminDataContextValue | null>(null);
 

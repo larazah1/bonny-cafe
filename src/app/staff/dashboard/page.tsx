@@ -69,7 +69,7 @@ export default function StaffDashboardPage() {
     return (
       <button
         onClick={() => updateStatus(o.id, next)}
-        className="focus-ring rounded-full bg-brown-800 px-4 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+        className="focus-ring rounded-full bg-primary px-4 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
       >
         {label}
       </button>
@@ -77,18 +77,18 @@ export default function StaffDashboardPage() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <div className="container-page max-w-5xl py-page">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="font-display text-2xl font-semibold text-brown-950 sm:text-3xl">
+          <h1 className="font-display text-2xl font-semibold text-heading sm:text-3xl">
             {dict.staff.dashboardTitle}
           </h1>
-          <p className="mt-1 text-sm text-brown-500">{staff.name}</p>
+          <p className="mt-1 text-sm text-muted">{staff.name}</p>
         </div>
         <div className="flex gap-2">
           <Link
             href="/staff/profile"
-            className="focus-ring rounded-full border border-brown-200 px-4 py-2 text-xs font-semibold text-brown-700 hover:border-brown-400"
+            className="focus-ring rounded-full border border-line px-4 py-2 text-xs font-semibold text-body hover:border-brown-400"
           >
             {dict.staff.profileLink}
           </Link>
@@ -103,8 +103,8 @@ export default function StaffDashboardPage() {
               onClick={() => setBucket(t.id)}
               className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium ${
                 bucket === t.id
-                  ? "border-brown-800 bg-brown-800 text-cream-50"
-                  : "border-brown-200 text-brown-700"
+                  ? "border-primary bg-primary text-on-primary"
+                  : "border-line text-body"
               }`}
             >
               {t.label}
@@ -115,20 +115,20 @@ export default function StaffDashboardPage() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={dict.staff.search}
-          className="focus-ring rounded-full border border-brown-200 bg-white px-4 py-2 text-sm sm:max-w-xs"
+          className="focus-ring rounded-full border border-line bg-white px-4 py-2 text-sm sm:max-w-xs"
         />
       </div>
 
       {orders.length === 0 ? (
-        <p className="mt-16 text-center text-brown-400">{dict.staff.noOrders}</p>
+        <p className="mt-16 text-center text-subtle">{dict.staff.noOrders}</p>
       ) : (
         <div className="mt-6 space-y-4">
           {orders.map((o) => (
-            <div key={o.id} className="rounded-2xl border border-brown-100 bg-white p-5">
+            <div key={o.id} className="rounded-2xl border border-line-soft bg-white p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-brown-950">#{o.id}</p>
-                  <p className="text-xs text-brown-400">
+                  <p className="text-sm font-semibold text-heading">#{o.id}</p>
+                  <p className="text-xs text-subtle">
                     {new Date(o.createdAt).toLocaleString(locale === "ar" ? "ar-SA" : "en-US")}
                   </p>
                 </div>
@@ -137,36 +137,36 @@ export default function StaffDashboardPage() {
 
               <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-brown-600 sm:grid-cols-4">
                 <div>
-                  <span className="block text-xs text-brown-400">{dict.staff.customer}</span>
+                  <span className="block text-xs text-subtle">{dict.staff.customer}</span>
                   {o.customerName}
                 </div>
                 <div dir="ltr">
-                  <span className="block text-xs text-brown-400">{dict.staff.phone}</span>
+                  <span className="block text-xs text-subtle">{dict.staff.phone}</span>
                   {o.phone}
                 </div>
                 <div>
-                  <span className="block text-xs text-brown-400">{dict.staff.pickup}</span>
+                  <span className="block text-xs text-subtle">{dict.staff.pickup}</span>
                   {o.pickupType === "drive-thru" ? dict.cart.driveThru : dict.cart.dineIn}
                 </div>
                 <div>
-                  <span className="block text-xs text-brown-400">{dict.orders.estMinutes}</span>
+                  <span className="block text-xs text-subtle">{dict.orders.estMinutes}</span>
                   {o.estimatedMinutes} {dict.orders.minutes}
                 </div>
               </div>
 
-              <ul className="mt-3 space-y-1 border-t border-brown-100 pt-3 text-sm text-brown-600">
+              <ul className="mt-3 space-y-1 border-t border-line-soft pt-3 text-sm text-brown-600">
                 {o.lines.map((l) => (
                   <li key={l.slug} className="flex justify-between">
                     <span>
                       {l.quantity}× {l.name}
-                      {l.note && <span className="text-brown-400"> — {l.note}</span>}
+                      {l.note && <span className="text-subtle"> — {l.note}</span>}
                     </span>
                     <span>{formatSAR(l.price * l.quantity)}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-3 flex items-center justify-between border-t border-brown-100 pt-3">
+              <div className="mt-3 flex items-center justify-between border-t border-line-soft pt-3">
                 <span className="text-sm font-semibold text-brown-800">
                   {dict.cart.total}: {formatSAR(o.total)}
                 </span>

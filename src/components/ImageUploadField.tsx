@@ -31,7 +31,7 @@ export function ImageUploadField({
 
   return (
     <div>
-      {label && <span className="mb-1 block text-xs font-medium text-brown-500">{label}</span>}
+      {label && <span className="mb-1 block text-xs font-medium text-muted">{label}</span>}
       <div
         onClick={() => inputRef.current?.click()}
         onDragOver={(e) => {
@@ -45,7 +45,7 @@ export function ImageUploadField({
           handleFile(e.dataTransfer.files?.[0]);
         }}
         className={`flex cursor-pointer items-center gap-3 rounded-xl border-2 border-dashed p-3 transition-colors ${
-          dragOver ? "border-brown-500 bg-brown-50" : "border-brown-200 hover:border-brown-400"
+          dragOver ? "border-brown-500 bg-tint" : "border-line hover:border-brown-400"
         }`}
       >
         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-cream-100">
@@ -54,7 +54,7 @@ export function ImageUploadField({
             <img src={value} alt="" className="h-full w-full object-cover" />
           )}
         </div>
-        <span className="text-xs text-brown-500">
+        <span className="text-xs text-muted">
           {value ? dict.admin.replaceImage : dict.admin.dropImageHint}
         </span>
         <input

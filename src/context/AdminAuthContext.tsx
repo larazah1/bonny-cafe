@@ -22,9 +22,9 @@ interface AdminAuthContextValue {
   changePassword: (newPassword: string) => void;
 }
 
-const SEED: StoredAdmin = { username: "admin", password: "admin123", name: "Bonny HQ" };
-const SESSION_KEY = "bonny.adminSession";
-const PASSWORD_KEY = "bonny.adminPassword";
+const SEED: StoredAdmin = { username: "admin", password: "admin123", name: "Mocha House HQ" };
+const SESSION_KEY = "cafe.adminSession";
+const PASSWORD_KEY = "cafe.adminPassword";
 
 const AdminAuthContext = createContext<AdminAuthContextValue | null>(null);
 

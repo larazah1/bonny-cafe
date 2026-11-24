@@ -41,10 +41,46 @@
   --color-cream-100: var(--color-cream-100);
   --color-cream-200: var(--color-cream-200);
 
+  /* Semantic colours — use these in components; change the brand here. */
+  --color-primary: var(--color-brown-800);
+  --color-primary-strong: var(--color-brown-900);
+  --color-primary-deep: var(--color-brown-950);
+  --color-on-primary: var(--color-cream-50);
+  --color-heading: var(--color-brown-950);
+  --color-body: var(--color-brown-700);
+  --color-muted: var(--color-brown-500);
+  --color-subtle: var(--color-brown-400);
+  --color-line: var(--color-brown-200);
+  --color-line-soft: var(--color-brown-100);
+  --color-tint: var(--color-brown-50);
+  --color-tint-strong: var(--color-brown-100);
+
+  /* Layout spacing — py-page, py-section, py-spacious */
+  --spacing-page: 3rem;
+  --spacing-section: 4rem;
+  --spacing-spacious: 5rem;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+
   --font-sans: var(--font-inter);
   --font-serif: var(--font-fraunces);
   --font-arabic: var(--font-tajawal);
   --font-arabic-display: var(--font-reem-kufi);
+}
+
+/* Shared page container: centred, full width, responsive side gutters.
+   Pair with a max-w-* class for the width. */
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: --spacing(4);
+  @variant sm {
+    padding-inline: --spacing(6);
+  }
+  @variant lg {
+    padding-inline: --spacing(8);
+  }
 }
 
 body {

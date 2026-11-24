@@ -21,8 +21,8 @@ export function CategoryTabs({
           onClick={() => onChange(c.id)}
           className={`focus-ring shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
             active === c.id
-              ? "border-brown-800 bg-brown-800 text-cream-50"
-              : "border-brown-200 text-brown-700 hover:border-brown-400"
+              ? "border-primary bg-primary text-on-primary"
+              : "border-line text-body hover:border-brown-400"
           }`}
         >
           {locale === "ar" ? c.labelAr : c.label}

@@ -44,15 +44,15 @@ export default function AdminDashboardPage() {
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <div className="container-page max-w-6xl py-page">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="font-display text-2xl font-semibold text-brown-950 sm:text-3xl">
+        <h1 className="font-display text-2xl font-semibold text-heading sm:text-3xl">
           {dict.admin.dashboardTitle}
         </h1>
         <div className="flex gap-2">
           <Link
             href="/admin/profile"
-            className="focus-ring rounded-full border border-brown-200 px-4 py-2 text-xs font-semibold text-brown-700 hover:border-brown-400"
+            className="focus-ring rounded-full border border-line px-4 py-2 text-xs font-semibold text-body hover:border-brown-400"
           >
             {dict.admin.profileLink}
           </Link>
@@ -65,7 +65,7 @@ export default function AdminDashboardPage() {
             key={t.id}
             onClick={() => setTab(t.id)}
             className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium ${
-              tab === t.id ? "border-brown-800 bg-brown-800 text-cream-50" : "border-brown-200 text-brown-700"
+              tab === t.id ? "border-primary bg-primary text-on-primary" : "border-line text-body"
             }`}
           >
             {t.label}
@@ -119,10 +119,10 @@ function OverviewTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i1
       </div>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="rounded-2xl border border-brown-100 bg-white p-5">
+        <div className="rounded-2xl border border-line-soft bg-white p-5">
           <h3 className="font-semibold text-brown-900">{dict.admin.topItems}</h3>
           <ul className="mt-3 space-y-2 text-sm text-brown-600">
-            {stats.topItems.length === 0 && <li className="text-brown-400">—</li>}
+            {stats.topItems.length === 0 && <li className="text-subtle">—</li>}
             {stats.topItems.map(([name, qty]) => (
               <li key={name} className="flex justify-between">
                 <span>{name}</span>
@@ -131,7 +131,7 @@ function OverviewTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i1
             ))}
           </ul>
         </div>
-        <div className="rounded-2xl border border-brown-100 bg-white p-5">
+        <div className="rounded-2xl border border-line-soft bg-white p-5">
           <h3 className="font-semibold text-brown-900">{dict.admin.ordersByBranch}</h3>
           <ul className="mt-3 space-y-2 text-sm text-brown-600">
             {stats.byBranch.map(({ branch, count }) => (
@@ -149,9 +149,9 @@ function OverviewTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i1
 
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-brown-100 bg-white p-5">
-      <p className="text-xs text-brown-400">{label}</p>
-      <p className="mt-1 text-2xl font-semibold text-brown-950">{value}</p>
+    <div className="rounded-2xl border border-line-soft bg-white p-5">
+      <p className="text-xs text-subtle">{label}</p>
+      <p className="mt-1 text-2xl font-semibold text-heading">{value}</p>
     </div>
   );
 }
@@ -168,7 +168,7 @@ function OrdersTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n
       <select
         value={branchFilter}
         onChange={(e) => setBranchFilter(e.target.value as BranchId | "all")}
-        className="focus-ring rounded-full border border-brown-200 bg-white px-4 py-2 text-sm"
+        className="focus-ring rounded-full border border-line bg-white px-4 py-2 text-sm"
       >
         <option value="all">{dict.admin.allBranches}</option>
         {BRANCHES.map((b) => (
@@ -180,18 +180,18 @@ function OrdersTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n
 
       <div className="mt-5 space-y-3">
         {filtered.map((o) => (
-          <div key={o.id} className="rounded-2xl border border-brown-100 bg-white p-4">
+          <div key={o.id} className="rounded-2xl border border-line-soft bg-white p-4">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="text-sm">
-                <span className="font-semibold text-brown-950">#{o.id}</span>
-                <span className="ms-2 text-brown-400">
+                <span className="font-semibold text-heading">#{o.id}</span>
+                <span className="ms-2 text-subtle">
                   {pick(
                     locale,
                     BRANCHES.find((b) => b.id === o.branchId)?.name ?? "",
                     BRANCHES.find((b) => b.id === o.branchId)?.nameAr ?? ""
                   )}
                 </span>
-                <span className="ms-2 text-brown-400">{o.customerName}</span>
+                <span className="ms-2 text-subtle">{o.customerName}</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-sm font-semibold text-brown-800">{formatSAR(o.total)}</span>
@@ -200,7 +200,7 @@ function OrdersTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n
             </div>
           </div>
         ))}
-        {filtered.length === 0 && <p className="text-brown-400">—</p>}
+        {filtered.length === 0 && <p className="text-subtle">—</p>}
       </div>
     </div>
   );
@@ -220,11 +220,11 @@ function MenuTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n/e
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-3">
           <label className="flex items-center gap-2 text-sm text-brown-600">
-            <span className="text-xs text-brown-400">{dict.admin.viewingBranch}:</span>
+            <span className="text-xs text-subtle">{dict.admin.viewingBranch}:</span>
             <select
               value={branchId}
               onChange={(e) => setBranchId(e.target.value as BranchId)}
-              className="focus-ring rounded-full border border-brown-200 bg-white px-4 py-2 text-sm"
+              className="focus-ring rounded-full border border-line bg-white px-4 py-2 text-sm"
             >
               {BRANCHES.map((b) => (
                 <option key={b.id} value={b.id}>
@@ -236,7 +236,7 @@ function MenuTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n/e
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value as ProductCategory)}
-            className="focus-ring rounded-full border border-brown-200 bg-white px-4 py-2 text-sm"
+            className="focus-ring rounded-full border border-line bg-white px-4 py-2 text-sm"
           >
             {CATEGORIES.map((c) => (
               <option key={c.id} value={c.id}>
@@ -248,7 +248,7 @@ function MenuTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n/e
 
         <button
           onClick={() => setShowAddForm(true)}
-          className="focus-ring rounded-full bg-brown-800 px-5 py-2 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+          className="focus-ring rounded-full bg-primary px-5 py-2 text-sm font-semibold text-on-primary hover:bg-primary-strong"
         >
           + {dict.admin.addItem}
         </button>
@@ -258,7 +258,7 @@ function MenuTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n/e
         {products.map((p) => (
           <div
             key={p.slug}
-            className="flex flex-col gap-3 rounded-2xl border border-brown-100 bg-white p-4 sm:flex-row"
+            className="flex flex-col gap-3 rounded-2xl border border-line-soft bg-white p-4 sm:flex-row"
           >
             <div className="w-full shrink-0 sm:w-48">
               <ImageUploadField
@@ -270,24 +270,24 @@ function MenuTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n/e
               <div className="sm:col-span-2">
                 <p className="font-medium text-brown-900">{pick(locale, p.name, p.nameAr)}</p>
               </div>
-              <label className="block text-xs font-medium text-brown-500">
+              <label className="block text-xs font-medium text-muted">
                 {dict.admin.description}
                 <input
                   defaultValue={p.description}
                   onBlur={(e) => setProductOverride(p.slug, branchId, { description: e.target.value })}
-                  className="focus-ring mt-1 w-full rounded-lg border border-brown-200 px-2 py-1.5 text-sm"
+                  className="focus-ring mt-1 w-full rounded-lg border border-line px-2 py-1.5 text-sm"
                 />
               </label>
-              <label className="block text-xs font-medium text-brown-500">
+              <label className="block text-xs font-medium text-muted">
                 {dict.admin.price}
                 <input
                   type="number"
                   defaultValue={p.price}
                   onBlur={(e) => setProductOverride(p.slug, branchId, { price: Number(e.target.value) })}
-                  className="focus-ring mt-1 w-28 rounded-lg border border-brown-200 px-2 py-1.5 text-sm"
+                  className="focus-ring mt-1 w-28 rounded-lg border border-line px-2 py-1.5 text-sm"
                 />
               </label>
-              <label className="block text-xs font-medium text-brown-500">
+              <label className="block text-xs font-medium text-muted">
                 {dict.admin.prepTimeLabel}
                 <input
                   type="number"
@@ -296,7 +296,7 @@ function MenuTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i18n/e
                   onBlur={(e) =>
                     setProductOverride(p.slug, branchId, { prepTimeMinutes: Number(e.target.value) })
                   }
-                  className="focus-ring mt-1 w-28 rounded-lg border border-brown-200 px-2 py-1.5 text-sm"
+                  className="focus-ring mt-1 w-28 rounded-lg border border-line px-2 py-1.5 text-sm"
                 />
               </label>
               <div className="flex items-end">
@@ -364,7 +364,7 @@ function AddItemModal({
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-end justify-center bg-brown-950/50 p-0 sm:items-center sm:p-4"
+      className="fixed inset-0 z-[80] flex items-end justify-center bg-primary-deep/50 p-0 sm:items-center sm:p-4"
       onClick={onClose}
     >
       <div
@@ -374,11 +374,11 @@ function AddItemModal({
         aria-modal="true"
       >
         <div className="flex items-center justify-between">
-          <h3 className="font-display text-lg font-semibold text-brown-950">{dict.admin.addItem}</h3>
+          <h3 className="font-display text-lg font-semibold text-heading">{dict.admin.addItem}</h3>
           <button
             onClick={onClose}
             aria-label={dict.common.close}
-            className="focus-ring flex h-8 w-8 items-center justify-center rounded-full text-brown-500 hover:bg-brown-100"
+            className="focus-ring flex h-8 w-8 items-center justify-center rounded-full text-muted hover:bg-tint-strong"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
               <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -392,19 +392,19 @@ function AddItemModal({
             dir="ltr"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           />
           <input
             placeholder={dict.admin.addItemNameAr}
             dir="rtl"
             value={nameAr}
             onChange={(e) => setNameAr(e.target.value)}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           />
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value as ProductCategory)}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           >
             {CATEGORIES.map((c) => (
               <option key={c.id} value={c.id}>
@@ -417,7 +417,7 @@ function AddItemModal({
             placeholder={dict.admin.price}
             value={price || ""}
             onChange={(e) => setPrice(Number(e.target.value))}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           />
           <div className="sm:col-span-2">
             <ImageUploadField value={image} onChange={setImage} />
@@ -426,19 +426,19 @@ function AddItemModal({
             placeholder={dict.admin.description}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm sm:col-span-2"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm sm:col-span-2"
           />
         </div>
 
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-brown-600">
-          <span className="text-xs text-brown-400">{dict.admin.addItemVisibleIn}:</span>
+          <span className="text-xs text-subtle">{dict.admin.addItemVisibleIn}:</span>
           {BRANCHES.map((b) => (
             <label key={b.id} className="flex items-center gap-1.5">
               <input
                 type="checkbox"
                 checked={branches.includes(b.id)}
                 onChange={() => toggleBranch(b.id)}
-                className="h-4 w-4 accent-brown-800"
+                className="h-4 w-4 accent-primary"
               />
               {pick(locale, b.name, b.nameAr)}
             </label>
@@ -447,7 +447,7 @@ function AddItemModal({
 
         <button
           onClick={submit}
-          className="focus-ring mt-5 w-full rounded-full bg-brown-800 py-3 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+          className="focus-ring mt-5 w-full rounded-full bg-primary py-3 text-sm font-semibold text-on-primary hover:bg-primary-strong"
         >
           {dict.admin.addItemSubmit}
         </button>
@@ -471,15 +471,15 @@ function BranchesTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i1
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl border border-brown-100 bg-white p-5">
-        <label className="block text-sm font-medium text-brown-700">
+      <div className="rounded-2xl border border-line-soft bg-white p-5">
+        <label className="block text-sm font-medium text-body">
           {dict.admin.radiusLabel}
           <input
             type="number"
             min={1}
             value={radius}
             onChange={(e) => setRadius(Number(e.target.value))}
-            className="focus-ring mt-1.5 w-32 rounded-lg border border-brown-200 px-2 py-1.5"
+            className="focus-ring mt-1.5 w-32 rounded-lg border border-line px-2 py-1.5"
           />
         </label>
         <button
@@ -487,22 +487,22 @@ function BranchesTab({ locale, dict }: { locale: "en" | "ar"; dict: import("@/i1
             setOrderRadiusMinutes(radius);
             show(dict.admin.radiusSaved, "success");
           }}
-          className="focus-ring mt-3 rounded-full bg-brown-800 px-5 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+          className="focus-ring mt-3 rounded-full bg-primary px-5 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
         >
           {dict.admin.radiusSave}
         </button>
 
-        <div className="mt-5 border-t border-brown-100 pt-4">
-          <label className="flex items-start gap-2.5 text-sm font-medium text-brown-700">
+        <div className="mt-5 border-t border-line-soft pt-4">
+          <label className="flex items-start gap-2.5 text-sm font-medium text-body">
             <input
               type="checkbox"
               checked={requireLocationCheck}
               onChange={(e) => setRequireLocationCheck(e.target.checked)}
-              className="mt-0.5 h-4 w-4 accent-brown-800"
+              className="mt-0.5 h-4 w-4 accent-primary"
             />
             {dict.admin.requireLocationLabel}
           </label>
-          <p className="mt-1.5 text-xs text-brown-400">{dict.admin.requireLocationHint}</p>
+          <p className="mt-1.5 text-xs text-subtle">{dict.admin.requireLocationHint}</p>
         </div>
       </div>
 
@@ -562,60 +562,60 @@ function BranchEditCard({
   };
 
   return (
-    <div className="rounded-2xl border border-brown-100 bg-white p-5">
+    <div className="rounded-2xl border border-line-soft bg-white p-5">
       <h3 className="font-semibold text-brown-900">{pick(locale, branch.name, branch.nameAr)}</h3>
-      <label className="mt-3 block text-sm font-medium text-brown-700">
+      <label className="mt-3 block text-sm font-medium text-body">
         {dict.admin.phoneLabel}
         <input
           dir="ltr"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="focus-ring mt-1.5 w-full rounded-lg border border-brown-200 px-3 py-2"
+          className="focus-ring mt-1.5 w-full rounded-lg border border-line px-3 py-2"
         />
       </label>
-      <label className="mt-3 block text-sm font-medium text-brown-700">
+      <label className="mt-3 block text-sm font-medium text-body">
         {dict.admin.hoursLabel}
         <textarea
           rows={3}
           value={hoursText}
           onChange={(e) => setHoursText(e.target.value)}
-          className="focus-ring mt-1.5 w-full resize-none rounded-lg border border-brown-200 px-3 py-2 font-mono text-xs"
+          className="focus-ring mt-1.5 w-full resize-none rounded-lg border border-line px-3 py-2 font-mono text-xs"
         />
       </label>
-      <label className="mt-3 block text-sm font-medium text-brown-700">
+      <label className="mt-3 block text-sm font-medium text-body">
         {dict.admin.addressLabel}
         <input
           value={address}
           onChange={(e) => setAddress(e.target.value)}
-          className="focus-ring mt-1.5 w-full rounded-lg border border-brown-200 px-3 py-2"
+          className="focus-ring mt-1.5 w-full rounded-lg border border-line px-3 py-2"
         />
       </label>
       <div className="mt-3 grid grid-cols-2 gap-3">
-        <label className="block text-sm font-medium text-brown-700">
+        <label className="block text-sm font-medium text-body">
           {dict.admin.latLabel}
           <input
             dir="ltr"
             inputMode="decimal"
             value={lat}
             onChange={(e) => setLat(e.target.value)}
-            className="focus-ring mt-1.5 w-full rounded-lg border border-brown-200 px-3 py-2"
+            className="focus-ring mt-1.5 w-full rounded-lg border border-line px-3 py-2"
           />
         </label>
-        <label className="block text-sm font-medium text-brown-700">
+        <label className="block text-sm font-medium text-body">
           {dict.admin.lngLabel}
           <input
             dir="ltr"
             inputMode="decimal"
             value={lng}
             onChange={(e) => setLng(e.target.value)}
-            className="focus-ring mt-1.5 w-full rounded-lg border border-brown-200 px-3 py-2"
+            className="focus-ring mt-1.5 w-full rounded-lg border border-line px-3 py-2"
           />
         </label>
       </div>
-      <p className="mt-1.5 text-xs text-brown-400">{dict.admin.locationHint}</p>
+      <p className="mt-1.5 text-xs text-subtle">{dict.admin.locationHint}</p>
       <button
         onClick={save}
-        className="focus-ring mt-3 rounded-full bg-brown-800 px-5 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+        className="focus-ring mt-3 rounded-full bg-primary px-5 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
       >
         {dict.admin.branchSave}
       </button>
@@ -635,14 +635,14 @@ function StaffTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl border border-brown-100 bg-white p-5">
+      <div className="rounded-2xl border border-line-soft bg-white p-5">
         <h3 className="font-semibold text-brown-900">{dict.admin.staffList}</h3>
         <ul className="mt-3 divide-y divide-brown-50">
           {staffAccounts.map((s) => (
             <li key={s.username} className="flex items-center justify-between py-2 text-sm">
               <span>
                 <span className="font-medium text-brown-900">{s.name}</span>
-                <span className="ms-2 text-brown-400" dir="ltr">
+                <span className="ms-2 text-subtle" dir="ltr">
                   ({s.username})
                 </span>
               </span>
@@ -657,19 +657,19 @@ function StaffTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
         </ul>
       </div>
 
-      <div className="rounded-2xl border border-brown-100 bg-white p-5">
+      <div className="rounded-2xl border border-line-soft bg-white p-5">
         <h3 className="font-semibold text-brown-900">{dict.admin.addStaff}</h3>
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           <input
             placeholder={dict.admin.staffName}
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           />
           <select
             value={form.branchId}
             onChange={(e) => setForm({ ...form, branchId: e.target.value as BranchId })}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           >
             {BRANCHES.map((b) => (
               <option key={b.id} value={b.id}>
@@ -682,14 +682,14 @@ function StaffTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
             placeholder={dict.admin.staffUsername}
             value={form.username}
             onChange={(e) => setForm({ ...form, username: e.target.value })}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           />
           <input
             dir="ltr"
             placeholder={dict.admin.staffPassword}
             value={form.password}
             onChange={(e) => setForm({ ...form, password: e.target.value })}
-            className="focus-ring rounded-lg border border-brown-200 px-3 py-2 text-sm"
+            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm"
           />
         </div>
         <button
@@ -698,7 +698,7 @@ function StaffTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
             addStaff(form);
             setForm({ username: "", password: "", name: "", branchId: BRANCHES[0].id });
           }}
-          className="focus-ring mt-3 rounded-full bg-brown-800 px-5 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+          className="focus-ring mt-3 rounded-full bg-primary px-5 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
         >
           {dict.admin.addStaffSubmit}
         </button>
@@ -711,7 +711,7 @@ function StaffTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
 function RooftopTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
   const { requests, updateStatus } = useRental();
 
-  if (requests.length === 0) return <p className="text-brown-400">{dict.admin.rooftopEmpty}</p>;
+  if (requests.length === 0) return <p className="text-subtle">{dict.admin.rooftopEmpty}</p>;
 
   const statusLabel: Record<string, string> = {
     new: dict.admin.rooftopStatusNew,
@@ -720,7 +720,7 @@ function RooftopTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
     declined: dict.admin.rooftopStatusDeclined,
   };
   const statusColor: Record<string, string> = {
-    new: "bg-brown-100 text-brown-700",
+    new: "bg-tint-strong text-body",
     contacted: "bg-blue-100 text-blue-700",
     confirmed: "bg-green-100 text-green-700",
     declined: "bg-red-100 text-red-700",
@@ -735,11 +735,11 @@ function RooftopTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
           { status: "declined", label: dict.admin.rooftopMarkDeclined, activeClass: "bg-red-600 text-white border-red-600" },
         ];
         return (
-          <div key={r.id} className="rounded-2xl border border-brown-100 bg-white p-4">
+          <div key={r.id} className="rounded-2xl border border-line-soft bg-white p-4">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="text-sm">
-                <span className="font-semibold text-brown-950">{r.name}</span>
-                <span className="ms-2 text-brown-400" dir="ltr">
+                <span className="font-semibold text-heading">{r.name}</span>
+                <span className="ms-2 text-subtle" dir="ltr">
                   {r.phone}
                 </span>
               </div>
@@ -750,7 +750,7 @@ function RooftopTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
             <p className="mt-2 text-sm text-brown-600">
               {r.eventType} · {r.guests} guests · {r.date} · {r.timeSlot}
             </p>
-            {r.notes && <p className="mt-1 text-xs text-brown-400">{r.notes}</p>}
+            {r.notes && <p className="mt-1 text-xs text-subtle">{r.notes}</p>}
             <div className="mt-3 flex flex-wrap gap-2">
               {actions.map((a) => {
                 const isActive = r.status === a.status;
@@ -759,7 +759,7 @@ function RooftopTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
                     key={a.status}
                     onClick={() => updateStatus(r.id, a.status)}
                     className={`focus-ring rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
-                      isActive ? a.activeClass : "border-brown-200 text-brown-700 hover:border-brown-400"
+                      isActive ? a.activeClass : "border-line text-body hover:border-brown-400"
                     }`}
                   >
                     {a.label}
@@ -782,29 +782,29 @@ function AnnouncementTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
   const [ar, setAr] = useState(announcement.ar);
 
   return (
-    <div className="rounded-2xl border border-brown-100 bg-white p-5">
+    <div className="rounded-2xl border border-line-soft bg-white p-5">
       <h3 className="font-semibold text-brown-900">{dict.admin.announcementLabel}</h3>
-      <p className="mt-1 text-xs text-brown-400">{dict.admin.announcementHint}</p>
+      <p className="mt-1 text-xs text-subtle">{dict.admin.announcementHint}</p>
 
-      <label className="mt-4 block text-sm font-medium text-brown-700">
+      <label className="mt-4 block text-sm font-medium text-body">
         {dict.admin.announcementLabelEn}
         <textarea
           dir="ltr"
           rows={2}
           value={en}
           onChange={(e) => setEn(e.target.value)}
-          className="focus-ring mt-1.5 w-full resize-none rounded-lg border border-brown-200 px-3 py-2 text-sm"
+          className="focus-ring mt-1.5 w-full resize-none rounded-lg border border-line px-3 py-2 text-sm"
         />
       </label>
 
-      <label className="mt-4 block text-sm font-medium text-brown-700">
+      <label className="mt-4 block text-sm font-medium text-body">
         {dict.admin.announcementLabelAr}
         <textarea
           dir="rtl"
           rows={2}
           value={ar}
           onChange={(e) => setAr(e.target.value)}
-          className="focus-ring mt-1.5 w-full resize-none rounded-lg border border-brown-200 px-3 py-2 text-sm"
+          className="focus-ring mt-1.5 w-full resize-none rounded-lg border border-line px-3 py-2 text-sm"
         />
       </label>
 
@@ -813,7 +813,7 @@ function AnnouncementTab({ dict }: { dict: import("@/i18n/en").Dictionary }) {
           setAnnouncement({ en, ar });
           show(dict.admin.announcementSaved, "success");
         }}
-        className="focus-ring mt-4 rounded-full bg-brown-800 px-5 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+        className="focus-ring mt-4 rounded-full bg-primary px-5 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
       >
         {dict.admin.announcementSave}
       </button>

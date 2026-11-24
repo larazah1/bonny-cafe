@@ -33,12 +33,12 @@ export function MenuBrowser({ compact = false }: { compact?: boolean }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={dict.menu.search}
-          className="focus-ring w-full rounded-full border border-brown-200 bg-white px-5 py-2.5 text-sm placeholder:text-brown-300 sm:max-w-xs"
+          className="focus-ring w-full rounded-full border border-line bg-white px-5 py-2.5 text-sm placeholder:text-brown-300 sm:max-w-xs"
         />
       </div>
 
       {products.length === 0 ? (
-        <p className="mt-16 text-center text-brown-400">{dict.menu.noResults}</p>
+        <p className="mt-16 text-center text-subtle">{dict.menu.noResults}</p>
       ) : (
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {products.map((p) => (

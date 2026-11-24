@@ -19,11 +19,11 @@ export function writeStorage<T>(key: string, value: T): void {
 }
 
 export const STORAGE_KEYS = {
-  branch: "bonny.selectedBranch",
-  cart: "bonny.cart",
-  customer: "bonny.customerAccount",
-  customerSession: "bonny.customerSession",
-  orders: "bonny.orders",
-  staffSession: "bonny.staffSession",
-  adminSession: "bonny.adminSession",
+  branch: "cafe.selectedBranch",
+  cart: "cafe.cart",
+  customer: "cafe.customerAccount",
+  customerSession: "cafe.customerSession",
+  orders: "cafe.orders",
+  staffSession: "cafe.staffSession",
+  adminSession: "cafe.adminSession",
 } as const;

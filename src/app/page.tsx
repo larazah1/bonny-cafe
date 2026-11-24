@@ -30,18 +30,18 @@ export default function HomePage() {
   return (
     <div>
       {announcement[locale] && (
-        <div className="bg-brown-800 px-4 py-2.5 text-center text-sm font-medium text-cream-50">
+        <div className="bg-primary px-4 py-2.5 text-center text-sm font-medium text-on-primary">
           {announcement[locale]}
         </div>
       )}
 
       {/* Compact hero */}
-      <section className="bg-brown-950">
-        <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+      <section className="bg-primary-deep">
+        <div className="container-page flex max-w-7xl flex-col items-start gap-3 py-8 sm:py-10">
           <span className="rounded-full border border-brown-700 px-3.5 py-1 text-xs font-medium tracking-wide text-brown-200">
             {dict.home.heroKicker}
           </span>
-          <h1 className="font-display max-w-2xl text-3xl font-semibold leading-[1.15] text-cream-50 sm:text-5xl">
+          <h1 className="font-display max-w-2xl text-3xl font-semibold leading-[1.15] text-on-primary sm:text-5xl">
             {locale === "ar" ? kashida(dict.home.heroTitle, 1) : dict.home.heroTitle}
           </h1>
         </div>
@@ -49,19 +49,19 @@ export default function HomePage() {
 
       {/* Location status — prompt / locating / found, one clear state at a time */}
       {showLocatePrompt && (
-        <section className="border-b border-brown-100 bg-brown-50">
-          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-3 sm:flex-row sm:px-6 lg:px-8">
-            <p className="text-sm text-brown-700">{dict.home.locatePrompt}</p>
+        <section className="border-b border-line-soft bg-tint">
+          <div className="container-page flex max-w-7xl flex-col items-center justify-between gap-3 py-3 sm:flex-row">
+            <p className="text-sm text-body">{dict.home.locatePrompt}</p>
             <div className="flex gap-2">
               <button
                 onClick={requestLocation}
-                className="focus-ring rounded-full bg-brown-800 px-5 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+                className="focus-ring rounded-full bg-primary px-5 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
               >
                 {dict.home.locateAction}
               </button>
               <button
                 onClick={() => setDismissedLocate(true)}
-                className="focus-ring rounded-full px-4 py-2 text-xs font-medium text-brown-500 hover:bg-brown-100"
+                className="focus-ring rounded-full px-4 py-2 text-xs font-medium text-muted hover:bg-tint-strong"
               >
                 {dict.home.locateSkip}
               </button>
@@ -70,31 +70,31 @@ export default function HomePage() {
         </section>
       )}
       {geoStatus === "requesting" && (
-        <section className="border-b border-brown-100 bg-brown-50">
-          <div className="mx-auto flex max-w-7xl items-center gap-2.5 px-4 py-3 text-sm font-medium text-brown-700 sm:px-6 lg:px-8">
+        <section className="border-b border-line-soft bg-tint">
+          <div className="container-page flex max-w-7xl items-center gap-2.5 py-3 text-sm font-medium text-body">
             <span className="h-3.5 w-3.5 shrink-0 animate-spin rounded-full border-2 border-brown-300 border-t-brown-800" />
             {dict.home.locating}
           </div>
         </section>
       )}
       {showLocateFailed && (
-        <section className="border-b border-brown-100 bg-brown-50">
-          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-3 sm:flex-row sm:px-6 lg:px-8">
-            <p className="text-sm text-brown-700">
+        <section className="border-b border-line-soft bg-tint">
+          <div className="container-page flex max-w-7xl flex-col items-center justify-between gap-3 py-3 sm:flex-row">
+            <p className="text-sm text-body">
               {geoStatus === "denied" ? dict.home.locateDenied : dict.home.locateUnsupported}
             </p>
             <div className="flex gap-2">
               {geoStatus === "denied" && (
                 <button
                   onClick={requestLocation}
-                  className="focus-ring rounded-full bg-brown-800 px-5 py-2 text-xs font-semibold text-cream-50 hover:bg-brown-900"
+                  className="focus-ring rounded-full bg-primary px-5 py-2 text-xs font-semibold text-on-primary hover:bg-primary-strong"
                 >
                   {dict.home.locateRetry}
                 </button>
               )}
               <button
                 onClick={() => setDismissedLocate(true)}
-                className="focus-ring rounded-full px-4 py-2 text-xs font-medium text-brown-500 hover:bg-brown-100"
+                className="focus-ring rounded-full px-4 py-2 text-xs font-medium text-muted hover:bg-tint-strong"
               >
                 {dict.home.locateSkip}
               </button>
@@ -103,8 +103,8 @@ export default function HomePage() {
         </section>
       )}
       {showLocateConfirm && (
-        <section className="animate-fade-up border-b border-brown-100 bg-brown-800">
-          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-3 text-sm text-cream-50 sm:flex-row sm:px-6 lg:px-8">
+        <section className="animate-fade-up border-b border-line-soft bg-primary">
+          <div className="container-page flex max-w-7xl flex-col items-center justify-between gap-3 py-3 text-sm text-on-primary sm:flex-row">
             <p>
               {dict.home.locateConfirmBody.split("{branch}")[0]}
               <span className="font-semibold">
@@ -138,9 +138,9 @@ export default function HomePage() {
       )}
 
       {/* Order now — the full, filterable menu right on the homepage */}
-      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <section className="container-page max-w-7xl py-8">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="font-display text-2xl font-semibold text-brown-950 sm:text-3xl">
+          <h2 className="font-display text-2xl font-semibold text-heading sm:text-3xl">
             {dict.home.orderTitle}
           </h2>
           <BranchSwitcher />
@@ -151,8 +151,8 @@ export default function HomePage() {
       </section>
 
       {/* Ordering steps — compact, purchase-relevant guidance */}
-      <section className="border-t border-brown-100 bg-brown-50 py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="border-t border-line-soft bg-tint py-10">
+        <div className="container-page max-w-7xl">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {[
               { n: "1", t: dict.home.step1Title, b: dict.home.step1Body },
@@ -160,12 +160,12 @@ export default function HomePage() {
               { n: "3", t: dict.home.step3Title, b: dict.home.step3Body },
             ].map((s) => (
               <div key={s.n} className="flex items-start gap-3">
-                <span className="font-display flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brown-800 text-sm font-semibold text-cream-50">
+                <span className="font-display flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-on-primary">
                   {s.n}
                 </span>
                 <div>
-                  <h3 className="font-semibold text-brown-950">{s.t}</h3>
-                  <p className="mt-0.5 text-sm text-brown-500">{s.b}</p>
+                  <h3 className="font-semibold text-heading">{s.t}</h3>
+                  <p className="mt-0.5 text-sm text-muted">{s.b}</p>
                 </div>
               </div>
             ))}

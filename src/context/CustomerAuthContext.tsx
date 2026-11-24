@@ -37,8 +37,8 @@ interface CustomerAuthContextValue {
   pendingIdentifier: string | null;
 }
 
-const CUSTOMERS_KEY = "bonny.customers";
-const SESSION_KEY = "bonny.customerSession";
+const CUSTOMERS_KEY = "cafe.customers";
+const SESSION_KEY = "cafe.customerSession";
 
 const CustomerAuthContext = createContext<CustomerAuthContextValue | null>(null);
 

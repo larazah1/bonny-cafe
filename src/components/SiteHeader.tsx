@@ -51,16 +51,16 @@ export function SiteHeader() {
       : dict.nav.login;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brown-100 bg-cream-50/95 backdrop-saturate-150">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-line-soft bg-cream-50/95 backdrop-saturate-150">
+      <div className="container-page flex h-16 max-w-7xl items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
-            src="/images/logo.png"
-            alt="Bonny"
+            src="/images/logo.svg"
+            alt={dict.common.brandName}
             width={34}
             height={34}
             priority
-            className="h-[34px] w-[34px]"
+            className="size-8.5"
           />
           <span className="font-display text-xl font-semibold tracking-tight text-brown-900">
             {locale === "ar" ? kashida(dict.common.brandName, 1) : dict.common.brandName}
@@ -74,8 +74,8 @@ export function SiteHeader() {
               href={l.href}
               className={`focus-ring rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
                 isActive(l.href)
-                  ? "bg-brown-800 text-cream-50"
-                  : "text-brown-700 hover:bg-brown-100"
+                  ? "bg-primary text-on-primary"
+                  : "text-body hover:bg-tint-strong"
               }`}
             >
               {l.label}
@@ -90,7 +90,7 @@ export function SiteHeader() {
 
           <button
             onClick={toggleLocale}
-            className="focus-ring hidden rounded-full border border-brown-200 px-3 py-1.5 text-xs font-semibold text-brown-800 hover:border-brown-400 sm:block"
+            className="focus-ring hidden rounded-full border border-line px-3 py-1.5 text-xs font-semibold text-brown-800 hover:border-brown-400 sm:block"
             aria-label="Toggle language"
           >
             {dict.footer.langToggle}
@@ -98,7 +98,7 @@ export function SiteHeader() {
 
           <Link
             href="/cart"
-            className="focus-ring relative rounded-full p-2 text-brown-800 hover:bg-brown-100"
+            className="focus-ring relative rounded-full p-2 text-brown-800 hover:bg-tint-strong"
             aria-label={dict.nav.cart}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -113,7 +113,7 @@ export function SiteHeader() {
               <circle cx="18" cy="21" r="1.4" fill="currentColor" />
             </svg>
             {count > 0 && (
-              <span className="absolute -top-0.5 -end-0.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-brown-800 px-1 text-[10px] font-bold text-cream-50">
+              <span className="absolute -top-0.5 -end-0.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-primary px-1 text-2xs font-bold text-on-primary">
                 {count}
               </span>
             )}
@@ -121,7 +121,7 @@ export function SiteHeader() {
 
           <Link
             href={accountHref}
-            className="focus-ring hidden rounded-full p-2 text-brown-800 hover:bg-brown-100 sm:block"
+            className="focus-ring hidden rounded-full p-2 text-brown-800 hover:bg-tint-strong sm:block"
             aria-label={accountLabel}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -137,7 +137,7 @@ export function SiteHeader() {
 
           <button
             onClick={() => setMobileOpen((o) => !o)}
-            className="focus-ring rounded-full p-2 text-brown-800 hover:bg-brown-100 lg:hidden"
+            className="focus-ring rounded-full p-2 text-brown-800 hover:bg-tint-strong lg:hidden"
             aria-label="Menu"
             aria-expanded={mobileOpen}
           >
@@ -153,7 +153,7 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-brown-100 bg-cream-50 px-4 pb-4 pt-2 lg:hidden">
+        <div className="border-t border-line-soft bg-cream-50 px-4 pb-4 pt-2 lg:hidden">
           <div className="mb-3">
             <BranchSwitcher />
           </div>
@@ -164,7 +164,7 @@ export function SiteHeader() {
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
                 className={`rounded-xl px-3.5 py-2.5 text-sm font-medium ${
-                  isActive(l.href) ? "bg-brown-800 text-cream-50" : "text-brown-700 hover:bg-brown-100"
+                  isActive(l.href) ? "bg-primary text-on-primary" : "text-body hover:bg-tint-strong"
                 }`}
               >
                 {l.label}
@@ -173,13 +173,13 @@ export function SiteHeader() {
             <Link
               href={accountHref}
               onClick={() => setMobileOpen(false)}
-              className="rounded-xl px-3.5 py-2.5 text-sm font-medium text-brown-700 hover:bg-brown-100"
+              className="rounded-xl px-3.5 py-2.5 text-sm font-medium text-body hover:bg-tint-strong"
             >
               {accountLabel}
             </Link>
             <button
               onClick={toggleLocale}
-              className="mt-1 rounded-xl border border-brown-200 px-3.5 py-2.5 text-start text-sm font-semibold text-brown-800"
+              className="mt-1 rounded-xl border border-line px-3.5 py-2.5 text-start text-sm font-semibold text-brown-800"
             >
               {dict.footer.langToggle}
             </button>

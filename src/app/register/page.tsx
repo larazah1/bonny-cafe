@@ -62,9 +62,9 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="mx-auto max-w-md px-4 py-14 sm:px-6">
-      <h1 className="font-display text-3xl font-semibold text-brown-950">{dict.auth.registerTitle}</h1>
-      <p className="mt-2 text-brown-500">{dict.auth.registerSubtitle}</p>
+    <div className="container-page max-w-md py-section">
+      <h1 className="font-display text-3xl font-semibold text-heading">{dict.auth.registerTitle}</h1>
+      <p className="mt-2 text-muted">{dict.auth.registerSubtitle}</p>
 
       {stage === "enter" ? (
         <form onSubmit={handleRegister} className="mt-8 space-y-4">
@@ -91,7 +91,7 @@ export default function RegisterPage() {
               onChange={(e) => setPassword(e.target.value)}
               className={inputClass}
             />
-            <span className="mt-1 block text-xs text-brown-400">{dict.auth.passwordOptionalHint}</span>
+            <span className="mt-1 block text-xs text-subtle">{dict.auth.passwordOptionalHint}</span>
           </Field>
           <button type="submit" className={submitClass}>
             {dict.auth.registerSubmit}
@@ -99,11 +99,11 @@ export default function RegisterPage() {
         </form>
       ) : (
         <form onSubmit={handleVerify} className="mt-8 space-y-4">
-          <p className="text-sm text-brown-500">
+          <p className="text-sm text-muted">
             {dict.auth.codeSentTo} <span dir="ltr">{mobile}</span>
           </p>
           {demoCode && (
-            <p className="rounded-xl bg-brown-50 p-3 text-sm text-brown-700">
+            <p className="rounded-xl bg-tint p-3 text-sm text-body">
               {dict.auth.demoCodeNote} <span className="font-mono font-bold">{demoCode}</span>
             </p>
           )}
@@ -126,7 +126,7 @@ export default function RegisterPage() {
         </form>
       )}
 
-      <p className="mt-6 text-center text-sm text-brown-500">
+      <p className="mt-6 text-center text-sm text-muted">
         {dict.auth.alreadyHaveAccount}{" "}
         <Link href="/login" className="font-semibold text-brown-800 hover:underline">
           {dict.auth.logInInstead}
@@ -137,13 +137,13 @@ export default function RegisterPage() {
 }
 
 const inputClass =
-  "focus-ring mt-1.5 w-full rounded-xl border border-brown-200 bg-white px-3.5 py-2.5 text-sm text-brown-900";
+  "focus-ring mt-1.5 w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-sm text-brown-900";
 const submitClass =
-  "focus-ring w-full rounded-full bg-brown-800 py-3 text-sm font-semibold text-cream-50 hover:bg-brown-900";
+  "focus-ring w-full rounded-full bg-primary py-3 text-sm font-semibold text-on-primary hover:bg-primary-strong";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <label className="block text-sm font-medium text-brown-700">
+    <label className="block text-sm font-medium text-body">
       {label}
       {children}
     </label>

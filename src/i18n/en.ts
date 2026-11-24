@@ -1,6 +1,6 @@
 const en = {
   common: {
-    brandName: "Bonny",
+    brandName: "Mocha House",
     sar: "SAR",
     loading: "Loading…",
     save: "Save",
@@ -65,7 +65,7 @@ const en = {
     featuredTitle: "Fan favourites",
     featuredSubtitle: "The drinks and bakes our regulars keep coming back for.",
     aboutTeaser:
-      "Bonny started as a single counter and a stubborn idea: that a neighbourhood café could roast its own beans and still feel like home.",
+      "Mocha House started as a single counter and a stubborn idea: that a neighbourhood café could roast its own beans and still feel like home.",
     aboutCta: "Our Story",
     branchesTitle: "Three branches, one standard",
     branchesSubtitle: "Pick a branch to see its menu, hours and pickup options.",
@@ -93,7 +93,7 @@ const en = {
   about: {
     kicker: "Our Story",
     title: "A neighbourhood roastery, grown slowly.",
-    p1: "Bonny opened its first counter in Al Basateen with a simple bet: that a small, honest café could roast its own beans, source them responsibly, and still feel like the corner of a friend's kitchen.",
+    p1: "Mocha House opened its first counter in Al Basateen with a simple bet: that a small, honest café could roast its own beans, source them responsibly, and still feel like the corner of a friend's kitchen.",
     p2: "Years on, we've grown to three branches across Jeddah — Al Basateen, Al Mohammadiyah and Al Manar — but the standard hasn't moved. Every cup is pulled to order, every pastry is baked fresh, and every branch is run by people who taste the batch before it goes on the menu.",
     p3: "We roast in small lots so flavour stays consistent, cup after cup — from a quick Turkish coffee on the way to work, to a slow V60 with a friend on a Friday afternoon.",
     valuesTitle: "What we care about",

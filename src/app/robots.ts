@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/cart", "/profile", "/staff", "/admin"],
       },
     ],
-    sitemap: "https://bonnycafe.example.com/sitemap.xml",
+    sitemap: "https://mochahouse.example.com/sitemap.xml",
   };
 }

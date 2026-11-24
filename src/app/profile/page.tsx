@@ -32,12 +32,12 @@ export default function ProfilePage() {
 
   if (!customer) {
     return (
-      <div className="mx-auto max-w-md px-4 py-24 text-center sm:px-6">
-        <h1 className="font-display text-2xl font-semibold text-brown-950">{dict.profile.title}</h1>
-        <p className="mt-3 text-brown-500">{dict.profile.loginPrompt}</p>
+      <div className="container-page max-w-md py-spacious text-center">
+        <h1 className="font-display text-2xl font-semibold text-heading">{dict.profile.title}</h1>
+        <p className="mt-3 text-muted">{dict.profile.loginPrompt}</p>
         <Link
           href="/login?next=/profile"
-          className="focus-ring mt-6 inline-block rounded-full bg-brown-800 px-7 py-3 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+          className="focus-ring mt-6 inline-block rounded-full bg-primary px-7 py-3 text-sm font-semibold text-on-primary hover:bg-primary-strong"
         >
           {dict.nav.login}
         </Link>
@@ -75,25 +75,25 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div className="container-page max-w-3xl py-page">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="font-display text-3xl font-semibold text-brown-950">{dict.profile.title}</h1>
+        <h1 className="font-display text-3xl font-semibold text-heading">{dict.profile.title}</h1>
         <button
           onClick={handleLogout}
-          className="focus-ring rounded-full border border-brown-200 px-4 py-2 text-xs font-semibold text-brown-700 hover:border-brown-400"
+          className="focus-ring rounded-full border border-line px-4 py-2 text-xs font-semibold text-body hover:border-brown-400"
         >
           {dict.nav.logout}
         </button>
       </div>
 
       {/* Account info */}
-      <div className="mt-8 rounded-2xl border border-brown-100 bg-white p-5">
+      <div className="mt-8 rounded-2xl border border-line-soft bg-white p-5">
         <div className="flex items-center justify-between">
           <h2 className="font-semibold text-brown-900">{dict.profile.accountTitle}</h2>
           {!editing && (
             <button
               onClick={() => setEditing(true)}
-              className="focus-ring rounded-full border border-brown-200 px-4 py-1.5 text-xs font-semibold text-brown-700 hover:border-brown-400"
+              className="focus-ring rounded-full border border-line px-4 py-1.5 text-xs font-semibold text-body hover:border-brown-400"
             >
               {dict.profile.edit}
             </button>
@@ -117,7 +117,7 @@ export default function ProfilePage() {
             <div className="flex gap-2">
               <button
                 onClick={handleSaveInfo}
-                className="focus-ring rounded-full bg-brown-800 px-5 py-2 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+                className="focus-ring rounded-full bg-primary px-5 py-2 text-sm font-semibold text-on-primary hover:bg-primary-strong"
               >
                 {dict.profile.saveInfo}
               </button>
@@ -127,7 +127,7 @@ export default function ProfilePage() {
                   setFullName(customer.fullName);
                   setEmail(customer.email);
                 }}
-                className="focus-ring rounded-full border border-brown-200 px-5 py-2 text-sm font-semibold text-brown-700"
+                className="focus-ring rounded-full border border-line px-5 py-2 text-sm font-semibold text-body"
               >
                 {dict.common.cancel}
               </button>
@@ -136,37 +136,37 @@ export default function ProfilePage() {
         ) : (
           <div className="mt-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
             <div>
-              <span className="block text-xs text-brown-400">{dict.auth.fullNameLabel}</span>
+              <span className="block text-xs text-subtle">{dict.auth.fullNameLabel}</span>
               <span className="text-brown-900">{customer.fullName}</span>
             </div>
             <div>
-              <span className="block text-xs text-brown-400">{dict.auth.phoneLabel}</span>
+              <span className="block text-xs text-subtle">{dict.auth.phoneLabel}</span>
               <span className="text-brown-900" dir="ltr">
                 {customer.mobile}
               </span>
             </div>
             <div>
-              <span className="block text-xs text-brown-400">{dict.auth.emailLabel}</span>
+              <span className="block text-xs text-subtle">{dict.auth.emailLabel}</span>
               <span className="text-brown-900" dir="ltr">
                 {customer.email}
               </span>
             </div>
           </div>
         )}
-        {!editing && <p className="mt-3 text-xs text-brown-400">{dict.profile.mobileHint}</p>}
+        {!editing && <p className="mt-3 text-xs text-subtle">{dict.profile.mobileHint}</p>}
       </div>
 
       {/* Orders */}
-      <h2 className="font-display mt-10 text-xl font-semibold text-brown-950">
+      <h2 className="font-display mt-10 text-xl font-semibold text-heading">
         {dict.profile.ordersTitle}
       </h2>
 
       {orders.length === 0 ? (
-        <div className="mt-4 rounded-2xl border border-brown-100 bg-white p-6 text-center">
-          <p className="text-brown-500">{dict.orders.empty}</p>
+        <div className="mt-4 rounded-2xl border border-line-soft bg-white p-6 text-center">
+          <p className="text-muted">{dict.orders.empty}</p>
           <Link
             href="/"
-            className="focus-ring mt-4 inline-block rounded-full bg-brown-800 px-6 py-2.5 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+            className="focus-ring mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-on-primary hover:bg-primary-strong"
           >
             {dict.cart.browseMenu}
           </Link>
@@ -177,13 +177,13 @@ export default function ProfilePage() {
             const branch = getBranch(o.branchId);
             const canCancel = o.status === "preparing";
             return (
-              <div key={o.id} className="rounded-2xl border border-brown-100 bg-white p-5">
+              <div key={o.id} className="rounded-2xl border border-line-soft bg-white p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <p className="text-sm font-semibold text-brown-950">
+                    <p className="text-sm font-semibold text-heading">
                       {dict.orders.orderNumber} #{o.id}
                     </p>
-                    <p className="text-xs text-brown-400">
+                    <p className="text-xs text-subtle">
                       {pick(locale, branch.name, branch.nameAr)} ·{" "}
                       {new Date(o.createdAt).toLocaleString(locale === "ar" ? "ar-SA" : "en-US")}
                     </p>
@@ -202,12 +202,12 @@ export default function ProfilePage() {
                   ))}
                 </ul>
 
-                <div className="mt-3 flex items-center justify-between border-t border-brown-100 pt-3">
+                <div className="mt-3 flex items-center justify-between border-t border-line-soft pt-3">
                   <span className="text-sm font-semibold text-brown-800">
                     {dict.cart.total}: {formatSAR(o.total)}
                   </span>
                   {o.status === "preparing" && o.estimatedMinutes && (
-                    <span className="text-xs text-brown-400">
+                    <span className="text-xs text-subtle">
                       {dict.orders.estMinutes}: {o.estimatedMinutes} {dict.orders.minutes}
                     </span>
                   )}
@@ -216,7 +216,7 @@ export default function ProfilePage() {
                 <div className="mt-4 flex gap-2">
                   <button
                     onClick={() => handleReorder(o)}
-                    className="focus-ring rounded-full border border-brown-200 px-4 py-2 text-xs font-semibold text-brown-700 hover:border-brown-400"
+                    className="focus-ring rounded-full border border-line px-4 py-2 text-xs font-semibold text-body hover:border-brown-400"
                   >
                     {dict.orders.reorder}
                   </button>

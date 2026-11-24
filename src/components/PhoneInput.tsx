@@ -20,9 +20,9 @@ export function PhoneInput({
   return (
     <div
       dir="ltr"
-      className={`focus-within:ring-brown-700 mt-1.5 flex items-stretch overflow-hidden rounded-xl border border-brown-200 bg-white focus-within:ring-1 ${className}`}
+      className={`focus-within:ring-brown-700 mt-1.5 flex items-stretch overflow-hidden rounded-xl border border-line bg-white focus-within:ring-1 ${className}`}
     >
-      <span className="flex items-center bg-brown-50 px-3 text-sm font-medium text-brown-600">
+      <span className="flex items-center bg-tint px-3 text-sm font-medium text-brown-600">
         {COUNTRY_CODE}
       </span>
       <input

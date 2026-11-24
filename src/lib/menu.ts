@@ -590,12 +590,12 @@ export const PRODUCTS: Product[] = [
     },
   },
   {
-    slug: "bonny-layers",
-    name: "Bonny Layers",
-    nameAr: "بني لايرز",
+    slug: "house-layers",
+    name: "House Layers",
+    nameAr: "طبقات البيت",
     description: "Our signature layered jar dessert — chocolate, cream and crunch.",
     category: "desserts",
-    image: img("bonny-layers"),
+    image: img("house-layers"),
     branchInfo: {
       "al-basateen": { price: 28, available: true },
       "al-mohammadiyah": { price: 25, available: true },

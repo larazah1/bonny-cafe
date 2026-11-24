@@ -30,7 +30,7 @@ interface RentalContextValue {
   updateStatus: (id: string, status: RooftopRequest["status"]) => void;
 }
 
-const KEY = "bonny.rooftopRequests";
+const KEY = "cafe.rooftopRequests";
 
 const RentalContext = createContext<RentalContextValue | null>(null);
 

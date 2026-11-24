@@ -39,7 +39,7 @@ export function ProductModal({
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-end justify-center bg-brown-950/50 sm:items-center sm:p-4"
+      className="fixed inset-0 z-[80] flex items-end justify-center bg-primary-deep/50 sm:items-center sm:p-4"
       onClick={onClose}
     >
       <div
@@ -66,17 +66,17 @@ export function ProductModal({
             </svg>
           </button>
           {!product.available && (
-            <span className="absolute start-3 top-3 rounded-full bg-brown-950/80 px-3 py-1 text-xs font-semibold text-cream-50">
+            <span className="absolute start-3 top-3 rounded-full bg-primary-deep/80 px-3 py-1 text-xs font-semibold text-on-primary">
               {pick(locale, "Sold out", "غير متوفر")}
             </span>
           )}
         </div>
 
         <div className="p-5 sm:p-6">
-          <h2 className="font-display text-2xl font-semibold text-brown-950">
+          <h2 className="font-display text-2xl font-semibold text-heading">
             {pick(locale, product.name, product.nameAr)}
           </h2>
-          <p className="mt-1 text-lg font-semibold text-brown-700">
+          <p className="mt-1 text-lg font-semibold text-body">
             {selectedSize
               ? `${formatSAR(unitPrice).replace(" SAR", "")} ${dict.common.sar}`
               : product.priceNote
@@ -88,7 +88,7 @@ export function ProductModal({
           )}
 
           {allergens.length > 0 && (
-            <p className="mt-3 text-xs text-brown-400">
+            <p className="mt-3 text-xs text-subtle">
               {pick(locale, "Contains: ", "يحتوي على: ")}
               {allergens.join(", ")}
             </p>
@@ -96,7 +96,7 @@ export function ProductModal({
 
           {sizes && sizes.length > 0 && (
             <div className="mt-4">
-              <span className="text-sm font-medium text-brown-700">
+              <span className="text-sm font-medium text-body">
                 {pick(locale, "Size", "الحجم")}
               </span>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -106,8 +106,8 @@ export function ProductModal({
                     onClick={() => setSizeIndex(i)}
                     className={`focus-ring rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
                       i === sizeIndex
-                        ? "border-brown-800 bg-brown-800 text-cream-50"
-                        : "border-brown-200 text-brown-700 hover:border-brown-400"
+                        ? "border-primary bg-primary text-on-primary"
+                        : "border-line text-body hover:border-brown-400"
                     }`}
                   >
                     {pick(locale, s.label, s.labelAr)} · {formatSAR(s.price).replace(" SAR", "")}{" "}
@@ -121,13 +121,13 @@ export function ProductModal({
           {product.available ? (
             <>
               <div className="mt-5 flex items-center gap-4">
-                <span className="text-sm font-medium text-brown-700">
+                <span className="text-sm font-medium text-body">
                   {pick(locale, "Quantity", "الكمية")}
                 </span>
-                <div className="flex items-center gap-3 rounded-full border border-brown-200 px-1">
+                <div className="flex items-center gap-3 rounded-full border border-line px-1">
                   <button
                     onClick={() => setQty((q) => Math.max(1, q - 1))}
-                    className="focus-ring flex h-8 w-8 items-center justify-center rounded-full text-lg text-brown-800 hover:bg-brown-100"
+                    className="focus-ring flex h-8 w-8 items-center justify-center rounded-full text-lg text-brown-800 hover:bg-tint-strong"
                     aria-label="-"
                   >
                     −
@@ -135,7 +135,7 @@ export function ProductModal({
                   <span className="w-5 text-center font-semibold">{qty}</span>
                   <button
                     onClick={() => setQty((q) => q + 1)}
-                    className="focus-ring flex h-8 w-8 items-center justify-center rounded-full text-lg text-brown-800 hover:bg-brown-100"
+                    className="focus-ring flex h-8 w-8 items-center justify-center rounded-full text-lg text-brown-800 hover:bg-tint-strong"
                     aria-label="+"
                   >
                     +
@@ -143,14 +143,14 @@ export function ProductModal({
                 </div>
               </div>
 
-              <label className="mt-4 block text-sm font-medium text-brown-700">
+              <label className="mt-4 block text-sm font-medium text-body">
                 {pick(locale, "Note (optional)", "ملاحظة (اختياري)")}
                 <textarea
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
                   rows={2}
                   placeholder={pick(locale, "e.g. less ice, extra hot", "مثال: ثلج أقل، حار جداً")}
-                  className="focus-ring mt-1.5 w-full resize-none rounded-xl border border-brown-200 p-3 text-sm placeholder:text-brown-300"
+                  className="focus-ring mt-1.5 w-full resize-none rounded-xl border border-line p-3 text-sm placeholder:text-brown-300"
                 />
               </label>
 
@@ -168,14 +168,14 @@ export function ProductModal({
                   addItem(cartProduct, qty, note || undefined);
                   onClose();
                 }}
-                className="focus-ring mt-5 w-full rounded-full bg-brown-800 py-3.5 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+                className="focus-ring mt-5 w-full rounded-full bg-primary py-3.5 text-sm font-semibold text-on-primary hover:bg-primary-strong"
               >
                 {pick(locale, "Add to Cart", "أضف إلى السلة")} ·{" "}
                 {formatSAR(unitPrice * qty).replace(" SAR", "")} {dict.common.sar}
               </button>
             </>
           ) : (
-            <p className="mt-5 rounded-xl bg-brown-50 p-3.5 text-sm text-brown-600">
+            <p className="mt-5 rounded-xl bg-tint p-3.5 text-sm text-brown-600">
               {pick(
                 locale,
                 "This item is currently unavailable at this branch.",

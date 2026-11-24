@@ -38,12 +38,12 @@ export default function RooftopPage() {
 
   return (
     <div>
-      <section className="bg-brown-950 py-16">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="bg-primary-deep py-16">
+        <div className="container-page max-w-3xl text-center">
           <span className="rounded-full border border-brown-700 px-4 py-1.5 text-xs font-medium text-brown-200">
             {dict.nav.rooftop}
           </span>
-          <h1 className="font-display mt-5 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
+          <h1 className="font-display mt-5 text-3xl font-semibold leading-tight text-on-primary sm:text-5xl">
             {dict.rooftop.title}
           </h1>
           <p className="mt-4 text-lg text-brown-200">{dict.rooftop.subtitle}</p>
@@ -58,10 +58,10 @@ export default function RooftopPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-2xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-brown-100 bg-white p-6 sm:p-8">
+      <section className="container-page max-w-2xl py-section">
+        <div className="rounded-3xl border border-line-soft bg-white p-6 sm:p-8">
           {submitted ? (
-            <p className="rounded-xl bg-brown-50 p-4 text-sm text-brown-700">
+            <p className="rounded-xl bg-tint p-4 text-sm text-body">
               {dict.rooftop.formSuccess}
             </p>
           ) : (
@@ -108,7 +108,7 @@ export default function RooftopPage() {
               </Field>
               <button
                 type="submit"
-                className="focus-ring w-full rounded-full bg-brown-800 py-3 text-sm font-semibold text-cream-50 hover:bg-brown-900"
+                className="focus-ring w-full rounded-full bg-primary py-3 text-sm font-semibold text-on-primary hover:bg-primary-strong"
               >
                 {dict.rooftop.formSubmit}
               </button>
