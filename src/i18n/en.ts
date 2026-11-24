@@ -37,6 +37,14 @@ const en = {
     followUs: "Follow Us",
     rights: "All rights reserved.",
     langToggle: "العربية",
+    photoCredits: "Photo credits",
+  },
+  credits: {
+    title: "Photo Credits",
+    subtitle:
+      "Menu photos are sourced from Wikimedia Commons under the licenses listed below. Photos are illustrative only.",
+    photoBy: "Photo by",
+    license: "License",
   },
   menu: {
     title: "Our Menu",

@@ -39,6 +39,14 @@ const ar: Dictionary = {
     followUs: "تابعنا",
     rights: "جميع الحقوق محفوظة.",
     langToggle: "English",
+    photoCredits: "حقوق الصور",
+  },
+  credits: {
+    title: "حقوق الصور",
+    subtitle:
+      "صور القائمة مأخوذة من ويكيميديا كومنز وفق التراخيص المذكورة أدناه. الصور للتوضيح فقط.",
+    photoBy: "تصوير",
+    license: "الترخيص",
   },
   menu: {
     title: "قائمة الطعام",

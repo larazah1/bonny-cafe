@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Thmanyah font files (license forbids redistribution)
+/public/fonts/thmanyah/*.otf

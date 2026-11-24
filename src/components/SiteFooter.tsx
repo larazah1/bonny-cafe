@@ -75,6 +75,7 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary pt-6 text-xs text-brown-300 sm:flex-row">
           <p>© {new Date().getFullYear()} {dict.common.brandName}. {dict.footer.rights}</p>
+          <Link href="/credits" className="hover:text-on-primary">{dict.footer.photoCredits}</Link>
         </div>
       </div>
     </footer>
